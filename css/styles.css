@@ -1,3 +1,100 @@
-h1{
-    background-color: red;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    height: 150px;
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    background-image: url(../img/background-header.jpeg);
+}
+
+.header-section-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+
+}
+
+.header-img-logo {
+    display: flex;
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.header-section-form {
+    display: flex;
+    width: 600px;
+    margin: 10px;
+    border: 5px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#search-form {
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-input {
+    width: 400px;
+    font-family: 'Raleway', sans-serif;
+    height: 30px;
+    margin-right: 5px;
+}
+
+#search-button {
+    height: 30px;
+    cursor: pointer;
+}
+
+#error-message {
+    color: red;
+}
+
+.header-nav-ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif
+
+}
+
+a {
+    display: flex;
+    align-items: center;
+    margin: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.header-section-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
+    margin: 10px;
+    width: 500px;
+    
 }
