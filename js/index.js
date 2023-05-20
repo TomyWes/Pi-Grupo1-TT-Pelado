@@ -16,3 +16,31 @@ searchForm.addEventListener('submit', function(e) { ;
         return;
     }
 });
+
+const modeToggle = document.querySelector('#mode-toggle');
+let preferredMode = localStorage.getItem('preferredMode');
+
+if (preferredMode === 'dark-mode') {
+  document.body.classList.add('dark-mode');
+  modeToggle.innerText = 'Modo Claro';
+} else {
+  preferredMode = 'light-mode';
+}
+
+function toggleMode() {
+  const isDarkMode = document.body.classList.contains('dark-mode');
+
+  if (isDarkMode) {
+    document.body.classList.remove('dark-mode');
+    modeToggle.innerText = 'Modo Oscuro';
+    preferredMode = 'light-mode';
+  } else {
+    document.body.classList.add('dark-mode');
+    modeToggle.innerText = 'Modo Claro';
+    preferredMode = 'dark-mode';
+  }
+
+  localStorage.setItem('preferredMode', preferredMode);
+}
+
+modeToggle.addEventListener('click', toggleMode);
