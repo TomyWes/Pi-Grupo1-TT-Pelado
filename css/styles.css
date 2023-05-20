@@ -13,21 +13,34 @@ header {
     border: 5px;
     border-color: black;
     border-style: solid;
-    border-radius: 20px;
     background-image: url(../img/background-header.jpeg);
+    background-position: center;
+    background-repeat: 2;
+}
+
+.border {
+    border: 5px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
 }
 
 .header-section-logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 130px;
+    width: 150px;
+    background-color: white;
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 100px;
 
 }
 
 .header-img-logo {
     display: flex;
-    width: 130px;
+    width: 150px;
     height: 130px;
     margin: 10px;
     padding: 10px;
@@ -37,13 +50,8 @@ header {
     display: flex;
     width: 600px;
     margin: 10px;
-    border: 5px;
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-radius: 20px;
     justify-content: center;
     align-items: center;
-
 }
 
 #search-form {
@@ -65,20 +73,15 @@ header {
     cursor: pointer;
 }
 
-#error-message {
-    color: red;
-}
-
 .header-nav-ul {
     display: flex;
     list-style-type: none;
     flex-direction: row;
     font-size: 30px;
     font-family: 'Raleway', sans-serif;
-
 }
 
-.header-nav-link{
+.header-nav-link {
     display: flex;
     align-items: center;
     margin: 25px;
@@ -90,16 +93,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px;
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-radius: 20px;
     margin: 10px;
     width: 500px;
-    
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,11 +106,12 @@ footer{
     border: 5px;
     border-color: black;
     border-style: solid;
-    border-radius: 20px;
     background-image: url(../img/background-header.jpeg);
+    background-position: center;
+    background-repeat: 2;
 }
 
-.ul-footer{
+.ul-footer {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -125,9 +124,6 @@ footer{
     margin-right: 30px;
 }
 
-.li-footer{
+.li-footer {
     font-size: 20px;
 }
-
-
-
