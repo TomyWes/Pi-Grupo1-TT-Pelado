@@ -1,46 +1,104 @@
-let searchForm = document.querySelector('#search-form') ;
-let searchInput = document.querySelector('#search-input') ;
+/* Variables para el formulario (barra de busqueda y boton lupa) */
+let searchForm = document.querySelector('#search-form');
+let searchInput = document.querySelector('#search-input');
 
+/* Evento para que no deje buscar con campo vacio o menos de 3 cáracteres */
+searchForm.addEventListener('submit', function (e) {
+  ;
+  let searchTerm = searchInput.value.trim();
 
-searchForm.addEventListener('submit', function(e) { ;
-    let searchTerm = searchInput.value.trim() ;
-
-    if (searchTerm === '') { ;
-        e.preventDefault();
-        alert('El campo de búsqueda está vacío');
-        return;
-    }
-    if (searchTerm.length < 3) { ;
-        e.preventDefault();
-        alert('La búsqueda debe tener al menos 3 cáracteres');
-        return;
-    }
+  if (searchTerm === '') {
+    ;
+    e.preventDefault();
+    alert('El campo de búsqueda está vacío');
+    return;
+  }
+  if (searchTerm.length < 3) {
+    ;
+    e.preventDefault();
+    alert('La búsqueda debe tener al menos 3 cáracteres');
+    return;
+  }
 });
-
+/* Variables para dark mode (botón y modo preferido para guardar elección de usuario) */
 const modeToggle = document.querySelector('#mode-toggle');
 let preferredMode = localStorage.getItem('preferredMode');
 
+/* Si el modo preferido es dark mode lo elige, sino default light mode */
 if (preferredMode === 'dark-mode') {
-  document.body.classList.add('dark-mode');
-  modeToggle.innerText = 'Modo Claro';
+  enableDarkMode();
 } else {
   preferredMode = 'light-mode';
 }
 
-function toggleMode() {
-  const isDarkMode = document.body.classList.contains('dark-mode');
+/*Función para habilitar el dark mode */
+function enableDarkMode() {
+  document.body.classList.add('dark-mode');
+  modeToggle.innerText = 'Modo Claro';
 
-  if (isDarkMode) {
-    document.body.classList.remove('dark-mode');
-    modeToggle.innerText = 'Modo Oscuro';
+  /* Dark mode para el header y su nav */
+  const header = document.querySelector('header');
+  header.classList.add('dark-mode');
+  const headerNavLinks = document.querySelectorAll('.header-nav-link');
+  headerNavLinks.forEach(link => {
+    link.classList.add('dark-mode');
+  });
+
+  /* Dark mode para el footer y su ul */
+  const footer = document.querySelector('footer');
+  footer.classList.add('dark-mode');
+  const footerUL = document.querySelectorAll('.ul-footer');
+  footerUL.forEach(ul => {
+    ul.classList.add('dark-mode');
+  });
+
+  /* Dark mode para la clase ''border'' */
+  const borders = document.querySelectorAll('.border');
+  borders.forEach(border => {
+    border.classList.add('dark-mode');
+  });
+}
+
+/* Funcion para habilitar el Light Mode */
+function enableLightMode() {
+  document.body.classList.remove('dark-mode');
+  modeToggle.innerText = 'Modo Oscuro';
+
+  /* Light mode para el header y su nav */
+  const header = document.querySelector('header');
+  header.classList.remove('dark-mode');
+  const headerNavLinks = document.querySelectorAll('.header-nav-link');
+  headerNavLinks.forEach(link => {
+    link.classList.remove('dark-mode');
+  });
+
+  /* Light mode para el footer y su ul */
+  const footer = document.querySelector('footer');
+  footer.classList.remove('dark-mode');
+  const footerUL = document.querySelectorAll('.ul-footer');
+  footerUL.forEach(ul => {
+    ul.classList.remove('dark-mode');
+  });
+
+  /* Light mode para la clase ''border'' */
+  const borders = document.querySelectorAll('.border');
+  borders.forEach(border => {
+    border.classList.remove('dark-mode');
+  });
+}
+
+/* Función para cambiar el modo, si el body contiene la clase dark-mode, se ejecuta la función enableLightMode, sino la tiene, la de Darkmode. Luego guarda tu preferencia*/
+function toggleMode() {
+  if (document.body.classList.contains('dark-mode')) {
+    enableLightMode();
     preferredMode = 'light-mode';
   } else {
-    document.body.classList.add('dark-mode');
-    modeToggle.innerText = 'Modo Claro';
+    enableDarkMode();
     preferredMode = 'dark-mode';
   }
 
   localStorage.setItem('preferredMode', preferredMode);
 }
 
+/* Evento para que se ejecute la funcion toggleMode al clickear el botón */
 modeToggle.addEventListener('click', toggleMode);
