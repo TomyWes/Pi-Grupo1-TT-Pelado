@@ -48,6 +48,11 @@ function enableDarkMode() {
   const logo = document.querySelector('.header-section-logo');
   logo.classList.add('dark-mode');
 
+  /* Dark mode para el form */
+  const searchBtn = document.querySelector('#search-button');
+  searchInput.classList.add('dark-mode');
+  searchBtn.classList.add('dark-mode');
+
   /* Dark mode para el footer y su ul */
   const footer = document.querySelector('footer');
   footer.classList.add('dark-mode');
@@ -79,6 +84,11 @@ function enableLightMode() {
   /* Light mode para el logo */
   const logo = document.querySelector('.header-section-logo')
   logo.classList.remove('dark-mode');
+
+  /* Light mode para el form */
+  searchInput.classList.remove('dark-mode')
+  const searchBtn = document.querySelector('#search-button')
+  searchBtn.classList.remove('dark-mode')
 
   /* Light mode para el footer y su ul */
   const footer = document.querySelector('footer');
