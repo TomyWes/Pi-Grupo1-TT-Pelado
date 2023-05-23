@@ -20,9 +20,17 @@ searchForm.addEventListener('submit', function (e) {
     return;
   }
 });
+
 /* Variables para dark mode (botón y modo preferido para guardar elección de usuario) */
 const modeToggle = document.querySelector('#mode-toggle');
 let preferredMode = localStorage.getItem('preferredMode');
+const header = document.querySelector('header');
+const headerNavLinks = document.querySelectorAll('.header-nav-link');
+const logo = document.querySelector('.header-section-logo');
+const searchBtn = document.querySelector('#search-button');
+const footer = document.querySelector('footer');
+const footerUL = document.querySelectorAll('.ul-footer');
+const borders = document.querySelectorAll('.border');
 
 /* Si el modo preferido es dark mode lo elige, sino default light mode */
 if (preferredMode === 'dark-mode') {
@@ -37,32 +45,26 @@ function enableDarkMode() {
   modeToggle.innerText = 'Modo Claro';
 
   /* Dark mode para el header y su nav */
-  const header = document.querySelector('header');
   header.classList.add('dark-mode');
-  const headerNavLinks = document.querySelectorAll('.header-nav-link');
   headerNavLinks.forEach(link => {
+    ;
     link.classList.add('dark-mode');
   });
 
   /*Dark mode para el logo */
-  const logo = document.querySelector('.header-section-logo');
   logo.classList.add('dark-mode');
 
   /* Dark mode para el form */
-  const searchBtn = document.querySelector('#search-button');
   searchInput.classList.add('dark-mode');
   searchBtn.classList.add('dark-mode');
 
   /* Dark mode para el footer y su ul */
-  const footer = document.querySelector('footer');
   footer.classList.add('dark-mode');
-  const footerUL = document.querySelectorAll('.ul-footer');
   footerUL.forEach(ul => {
     ul.classList.add('dark-mode');
   });
 
   /* Dark mode para la clase ''border'' */
-  const borders = document.querySelectorAll('.border');
   borders.forEach(border => {
     border.classList.add('dark-mode');
   });
@@ -74,32 +76,25 @@ function enableLightMode() {
   modeToggle.innerText = 'Modo Oscuro';
 
   /* Light mode para el header y su nav */
-  const header = document.querySelector('header');
   header.classList.remove('dark-mode');
-  const headerNavLinks = document.querySelectorAll('.header-nav-link');
   headerNavLinks.forEach(link => {
     link.classList.remove('dark-mode');
   });
 
   /* Light mode para el logo */
-  const logo = document.querySelector('.header-section-logo')
   logo.classList.remove('dark-mode');
 
   /* Light mode para el form */
   searchInput.classList.remove('dark-mode')
-  const searchBtn = document.querySelector('#search-button')
   searchBtn.classList.remove('dark-mode')
 
   /* Light mode para el footer y su ul */
-  const footer = document.querySelector('footer');
   footer.classList.remove('dark-mode');
-  const footerUL = document.querySelectorAll('.ul-footer');
   footerUL.forEach(ul => {
     ul.classList.remove('dark-mode');
   });
 
   /* Light mode para la clase ''border'' */
-  const borders = document.querySelectorAll('.border');
   borders.forEach(border => {
     border.classList.remove('dark-mode');
   });

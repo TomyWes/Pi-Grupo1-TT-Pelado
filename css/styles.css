@@ -14,6 +14,14 @@ body.dark-mode {
     color: #fff;
 }
 
+.raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+.opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
 header {
     display: flex;
     height: 150px;
@@ -87,7 +95,6 @@ header.dark-mode {
 
 #search-input {
     width: 400px;
-    font-family: 'Raleway', sans-serif;
     height: 30px;
     margin-right: 5px;
     color: black;
@@ -127,7 +134,6 @@ header.dark-mode {
     list-style-type: none;
     flex-direction: row;
     font-size: 30px;
-    font-family: 'Raleway', sans-serif;
 }
 
 .header-nav-link {
@@ -158,8 +164,18 @@ header.dark-mode {
 }
 
 #mode-toggle {
-    font-family: 'Raleway', sans-serif;
     background-color: white;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.loader.hidden {
+    display: none;
 }
 
 footer {
@@ -193,7 +209,6 @@ footer.dark-mode {
     list-style-type: none;
     padding-left: 0px;
     color: rgb(0, 0, 0);
-    font-family: 'Raleway', sans-serif;
     margin-left: 30px;
     margin-right: 30px;
 }
