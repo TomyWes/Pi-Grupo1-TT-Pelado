@@ -3,8 +3,7 @@ let searchForm = document.querySelector('#search-form');
 let searchInput = document.querySelector('#search-input');
 
 /* Evento para que no deje buscar con campo vacio o menos de 3 cáracteres */
-searchForm.addEventListener('submit', function (e) {
-  ;
+searchForm.addEventListener('submit', function (e) {;
   let searchTerm = searchInput.value.trim();
 
   if (searchTerm === '') {
@@ -46,8 +45,7 @@ function enableDarkMode() {
 
   /* Dark mode para el header y su nav */
   header.classList.add('dark-mode');
-  headerNavLinks.forEach(link => {
-    ;
+  headerNavLinks.forEach(link => {;
     link.classList.add('dark-mode');
   });
 
@@ -60,24 +58,24 @@ function enableDarkMode() {
 
   /* Dark mode para el footer y su ul */
   footer.classList.add('dark-mode');
-  footerUL.forEach(ul => {
+  footerUL.forEach(ul => {;
     ul.classList.add('dark-mode');
   });
 
   /* Dark mode para la clase ''border'' */
-  borders.forEach(border => {
+  borders.forEach(border => {;
     border.classList.add('dark-mode');
   });
 }
 
 /* Funcion para habilitar el Light Mode */
-function enableLightMode() {
+function enableLightMode() {;
   document.body.classList.remove('dark-mode');
   modeToggle.innerText = 'Modo Oscuro';
 
   /* Light mode para el header y su nav */
   header.classList.remove('dark-mode');
-  headerNavLinks.forEach(link => {
+  headerNavLinks.forEach(link => {;
     link.classList.remove('dark-mode');
   });
 
@@ -90,22 +88,22 @@ function enableLightMode() {
 
   /* Light mode para el footer y su ul */
   footer.classList.remove('dark-mode');
-  footerUL.forEach(ul => {
+  footerUL.forEach(ul => {;
     ul.classList.remove('dark-mode');
   });
 
   /* Light mode para la clase ''border'' */
-  borders.forEach(border => {
+  borders.forEach(border => {;
     border.classList.remove('dark-mode');
   });
 }
 
 /* Función para cambiar el modo, si el body contiene la clase dark-mode, se ejecuta la función enableLightMode, sino la tiene, la de Darkmode. Luego guarda tu preferencia*/
-function toggleMode() {
-  if (document.body.classList.contains('dark-mode')) {
+function toggleMode() {;
+  if (document.body.classList.contains('dark-mode')) {;
     enableLightMode();
     preferredMode = 'light-mode';
-  } else {
+  } else {;
     enableDarkMode();
     preferredMode = 'dark-mode';
   }
