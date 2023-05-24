@@ -25,9 +25,11 @@ const header = document.querySelector('header');
 const headerNavLinks = document.querySelectorAll('.header-nav-link');
 const logo = document.querySelector('.header-section-logo');
 const searchBtn = document.querySelector('#search-button');
+const mainSectionsH1 = document.querySelectorAll('.main-sections-h1')
 const footer = document.querySelector('footer');
 const footerUL = document.querySelectorAll('.ul-footer');
 const borders = document.querySelectorAll('.border');
+
 
 /* Si el modo preferido es dark mode lo elige, sino default light mode */
 if (preferredMode === 'dark-mode') {
@@ -54,6 +56,10 @@ function enableDarkMode() {
   searchInput.classList.add('dark-mode');
   searchBtn.classList.add('dark-mode');
 
+  mainSectionsH1.forEach(element => {;
+    element.classList.add('dark-mode');
+  });
+  
   /* Dark mode para el footer y su ul */
   footer.classList.add('dark-mode');
   footerUL.forEach(ul => {;
@@ -81,9 +87,13 @@ function enableLightMode() {;
   logo.classList.remove('dark-mode');
 
   /* Light mode para el form */
-  searchInput.classList.remove('dark-mode')
-  searchBtn.classList.remove('dark-mode')
+  searchInput.classList.remove('dark-mode');
+  searchBtn.classList.remove('dark-mode');
 
+  mainSectionsH1.forEach(element => {;
+    element.classList.remove('dark-mode');
+  });
+  
   /* Light mode para el footer y su ul */
   footer.classList.remove('dark-mode');
   footerUL.forEach(ul => {;

@@ -10,7 +10,7 @@ body {
 }
 
 body.dark-mode {
-    background-color: #1e202d;
+    background-color: #0d0620;
     color: white
 }
 
@@ -180,26 +180,51 @@ header.dark-mode {
     background-color: white;
 }
 
+.main-title {
+    display: flex;
+    justify-content: center;
+    color: rgb(188, 64, 188);
+}
+
 #home {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .main-sections {
     display: flex;
-    width: 300px;
+    width: 900px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 15px
+    margin: 10px;
+}
+
+.main-sections-h1 {
+    display: flex;
+    background-image: url(../img/background-header-lightmode.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    font-size: 30px;
+    justify-content: center;
+}
+
+.main-sections-h1.dark-mode {
+    background-image: url(../img/sound-wave-background_132230-70.avif)
 }
 
 .main-section-ul {
+    display: flex;
     list-style-type: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 40px;
 }
 
 .loader {
