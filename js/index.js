@@ -6,14 +6,12 @@ let searchInput = document.querySelector('#search-input');
 searchForm.addEventListener('submit', function (e) {;
   let searchTerm = searchInput.value.trim();
 
-  if (searchTerm === '') {
-    ;
+  if (searchTerm === '') {;
     e.preventDefault();
     alert('El campo de búsqueda está vacío');
     return;
   }
-  if (searchTerm.length < 3) {
-    ;
+  if (searchTerm.length < 3) {;
     e.preventDefault();
     alert('La búsqueda debe tener al menos 3 cáracteres');
     return;
@@ -41,7 +39,7 @@ if (preferredMode === 'dark-mode') {
 /*Función para habilitar el dark mode */
 function enableDarkMode() {
   document.body.classList.add('dark-mode');
-  modeToggle.innerText = 'Modo Claro';
+  modeToggle.classList.add('dark-mode');
 
   /* Dark mode para el header y su nav */
   header.classList.add('dark-mode');
@@ -71,7 +69,7 @@ function enableDarkMode() {
 /* Funcion para habilitar el Light Mode */
 function enableLightMode() {;
   document.body.classList.remove('dark-mode');
-  modeToggle.innerText = 'Modo Oscuro';
+  modeToggle.classList.remove('dark-mode');
 
   /* Light mode para el header y su nav */
   header.classList.remove('dark-mode');
