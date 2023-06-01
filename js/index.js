@@ -171,7 +171,7 @@ const albumsSection = document.querySelector('.albums');
 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums')
   .then(response => response.json())
   .then(data => {
-    const albums = data.data.slice(0, 7);
+    const albums = data.data.slice(0, 6);
 
     albums.forEach(album => {
       const article = document.createElement('article');
@@ -192,7 +192,7 @@ const artistsSection = document.querySelector('.artists');
 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists')
   .then(response => response.json())
   .then(data => {
-    const artists = data.data.slice(0, 8);
+    const artists = data.data.slice(0, 6);
 
     artists.forEach(artist => {
       const article = document.createElement('article');
