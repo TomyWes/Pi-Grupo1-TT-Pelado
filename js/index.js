@@ -3,15 +3,18 @@ let searchForm = document.querySelector('#search-form');
 let searchInput = document.querySelector('#search-input');
 
 /* Evento para que no deje buscar con campo vacio o menos de 3 cáracteres */
-searchForm.addEventListener('submit', function (e) {;
+searchForm.addEventListener('submit', function (e) {
+  ;
   let searchTerm = searchInput.value.trim();
 
-  if (searchTerm === '') {;
+  if (searchTerm === '') {
+    ;
     e.preventDefault();
     alert('El campo de búsqueda está vacío');
     return;
   }
-  if (searchTerm.length < 3) {;
+  if (searchTerm.length < 3) {
+    ;
     e.preventDefault();
     alert('La búsqueda debe tener al menos 3 cáracteres');
     return;
@@ -26,6 +29,7 @@ const headerNavLinks = document.querySelectorAll('.header-nav-link');
 const logo = document.querySelector('.header-section-logo');
 const searchBtn = document.querySelector('#search-button');
 const mainSectionsH1 = document.querySelectorAll('.main-sections-h1')
+const mainSectionsContent = document.querySelectorAll('.main-sections-content')
 const footer = document.querySelector('footer');
 const footerUL = document.querySelectorAll('.ul-footer');
 const borders = document.querySelectorAll('.border');
@@ -45,7 +49,8 @@ function enableDarkMode() {
 
   /* Dark mode para el header y su nav */
   header.classList.add('dark-mode');
-  headerNavLinks.forEach(link => {;
+  headerNavLinks.forEach(link => {
+    ;
     link.classList.add('dark-mode');
   });
 
@@ -59,27 +64,35 @@ function enableDarkMode() {
   mainSectionsH1.forEach(element => {;
     element.classList.add('dark-mode');
   });
-  
+
+  mainSectionsContent.forEach(element => {
+    element.classList.add('dark-mode');
+  });
+
   /* Dark mode para el footer y su ul */
   footer.classList.add('dark-mode');
-  footerUL.forEach(ul => {;
+  footerUL.forEach(ul => {
+    ;
     ul.classList.add('dark-mode');
   });
 
   /* Dark mode para la clase ''border'' */
-  borders.forEach(border => {;
+  borders.forEach(border => {
+    ;
     border.classList.add('dark-mode');
   });
 }
 
 /* Funcion para habilitar el Light Mode */
-function enableLightMode() {;
+function enableLightMode() {
+  ;
   document.body.classList.remove('dark-mode');
   modeToggle.classList.remove('dark-mode');
 
   /* Light mode para el header y su nav */
   header.classList.remove('dark-mode');
-  headerNavLinks.forEach(link => {;
+  headerNavLinks.forEach(link => {
+    ;
     link.classList.remove('dark-mode');
   });
 
@@ -93,25 +106,34 @@ function enableLightMode() {;
   mainSectionsH1.forEach(element => {;
     element.classList.remove('dark-mode');
   });
-  
+
+  mainSectionsContent.forEach(element => {
+    element.classList.remove('dark-mode');
+  });
+
   /* Light mode para el footer y su ul */
   footer.classList.remove('dark-mode');
-  footerUL.forEach(ul => {;
+  footerUL.forEach(ul => {
+    ;
     ul.classList.remove('dark-mode');
   });
 
   /* Light mode para la clase ''border'' */
-  borders.forEach(border => {;
+  borders.forEach(border => {
+    ;
     border.classList.remove('dark-mode');
   });
 }
 
 /* Función para cambiar el modo, si el body contiene la clase dark-mode, se ejecuta la función enableLightMode, sino la tiene, la de Darkmode. Luego guarda tu preferencia*/
-function toggleMode() {;
-  if (document.body.classList.contains('dark-mode')) {;
+function toggleMode() {
+  ;
+  if (document.body.classList.contains('dark-mode')) {
+    ;
     enableLightMode();
     preferredMode = 'light-mode';
-  } else {;
+  } else {
+    ;
     enableDarkMode();
     preferredMode = 'dark-mode';
   }
@@ -121,3 +143,67 @@ function toggleMode() {;
 
 /* Evento para que se ejecute la funcion toggleMode al clickear el botón */
 modeToggle.addEventListener('click', toggleMode);
+
+const songsSection = document.querySelector('.songs');
+
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks')
+  .then(response => response.json())
+  .then(data => {
+    const songs = data.data.slice(0, 6);
+
+    songs.forEach(song => {
+      const article = document.createElement('article');
+      article.classList.add('main-sections-content', 'opensans');
+      article.innerHTML = `
+        <a href="detail-song.html?id=${song.id}">
+          <h2>${song.title}</h2>
+          <p>${song.artist.name}</p>
+          <p>${song.album.title}</p>
+          <img src="${song.album.cover_medium}" alt="${song.title} Cover">
+        </a>
+      `;
+
+      songsSection.appendChild(article);
+    });
+  });
+
+const albumsSection = document.querySelector('.albums');
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums')
+  .then(response => response.json())
+  .then(data => {
+    const albums = data.data.slice(0, 7);
+
+    albums.forEach(album => {
+      const article = document.createElement('article');
+      article.classList.add('main-sections-content', 'opensans');
+      article.innerHTML = `
+        <a href="detail-album.html?id=${album.id}">
+          <h2>${album.title}</h2>
+          <p>${album.artist.name}</p>
+          <img src="${album.cover_medium}" alt="${album.title} Cover">
+        </a>
+      `;
+
+      albumsSection.appendChild(article);
+    });
+  });
+
+const artistsSection = document.querySelector('.artists');
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists')
+  .then(response => response.json())
+  .then(data => {
+    const artists = data.data.slice(0, 8);
+
+    artists.forEach(artist => {
+      const article = document.createElement('article');
+      article.classList.add('main-sections-content', 'opensans');
+      article.innerHTML = `
+        <a href="detail-artist.html?id=${artist.id}">
+          <h2>${artist.name}</h2>
+          <img src="${artist.picture_medium}" alt="${artist.name} Picture">
+        </a>
+      `;
+
+      artistsSection.appendChild(article);
+    });
+  });
