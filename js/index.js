@@ -147,63 +147,88 @@ modeToggle.addEventListener('click', toggleMode);
 const songsSection = document.querySelector('.songs');
 
 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks')
-  .then(response => response.json())
-  .then(data => {
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    console.log(data)
     const songs = data.data.slice(0, 5);
 
-    songs.forEach(song => {
-      const article = document.createElement('article');
-      article.classList.add('main-sections-content', 'opensans');
-      article.innerHTML = `
-        <a href="detail-song.html?id=${song.id}">
-          <h2>${song.title}</h2>
-          <p>${song.artist.name}</p>
-          <p>${song.album.title}</p>
-          <img src="${song.album.cover_medium}" alt="${song.title} Cover">
-        </a>
-      `;
+    let songsHTML = '';
 
-      songsSection.appendChild(article);
-    });
+    for (let i = 0; i < songs.length; i++) {
+      const song = songs[i];
+
+      songsHTML += `
+        <article class="main-sections-content opensans">
+          <a href="detail-song.html?id=${song.id}">
+            <h2>${song.title}</h2>
+            <p>${song.artist.name}</p>
+            <p>${song.album.title}</p>
+            <img src="${song.album.cover_medium}" alt="${song.title} Cover">
+          </a>
+        </article>
+      `;
+    }
+    songsSection.innerHTML += songsHTML;
+  })
+  .catch(function(error){
+    console.log('Error: ' + error);
   });
 
 const albumsSection = document.querySelector('.albums');
 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums')
-  .then(response => response.json())
-  .then(data => {
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data) {
     const albums = data.data.slice(0, 5);
 
-    albums.forEach(album => {
-      const article = document.createElement('article');
-      article.classList.add('main-sections-content', 'opensans');
-      article.innerHTML = `
-        <a href="detail-album.html?id=${album.id}">
-          <h2>${album.title}</h2>
-          <p>${album.artist.name}</p>
-          <img src="${album.cover_medium}" alt="${album.title} Cover">
-        </a>
-      `;
+    let albumsHTML = '';
 
-      albumsSection.appendChild(article);
-    });
+    for (let i = 0; i < albums.length; i++) {
+      const album = albums[i];
+
+      albumsHTML += `
+        <article class="main-sections-content opensans">
+          <a href="detail-album.html?id=${album.id}">
+            <h2>${album.title}</h2>
+            <p>${album.artist.name}</p>
+            <img src="${album.cover_medium}" alt="${album.title} Cover">
+          </a>
+        </article>
+      `;
+    }
+    albumsSection.innerHTML += albumsHTML;
+  })
+  .catch(function(error){
+    console.log('Error: ' + error);
   });
 
 const artistsSection = document.querySelector('.artists');
 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists')
-  .then(response => response.json())
-  .then(data => {
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
     const artists = data.data.slice(0, 5);
 
-    artists.forEach(artist => {
-      const article = document.createElement('article');
-      article.classList.add('main-sections-content', 'opensans');
-      article.innerHTML = `
-        <a href="detail-artist.html?id=${artist.id}">
-          <h2>${artist.name}</h2>
-          <img src="${artist.picture_medium}" alt="${artist.name} Picture">
-        </a>
-      `;
+    let artistsHTML = '';
 
-      artistsSection.appendChild(article);
-    });
-  });
+    for (let i = 0; i < artists.length; i++) {
+      const artist = artists[i];
+
+      artistsHTML += `
+        <article class="main-sections-content opensans">
+          <a href="detail-artist.html?id=${artist.id}">
+            <h2>${artist.name}</h2>
+            <img src="${artist.picture_medium}" alt="${artist.name} Picture">
+          </a>
+        </article>
+      `;
+    }
+    artistsSection.innerHTML += artistsHTML;
+  })
+  .catch(function(error){
+    console.log('Error: ' + error);
+  })

@@ -237,7 +237,22 @@ header.dark-mode {
 .dark-mode .main-sections-content a {
     color: white;
   }
+
+#song-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
   
+.song-name {
+    font-size: 50px;
+}
+
+.song-artist {
+    font-size: 30px;
+}
+
 .loader {
     display: flex;
     justify-content: center;
