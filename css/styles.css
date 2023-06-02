@@ -177,7 +177,7 @@ header.dark-mode {
 }
 
 #mode-toggle.dark-mode {
-    background-image: url('../img/sun-icon.png');
+    background-image: url(../img/bright-icon.png);
     background-position: center;
     background-color: white;
 }
