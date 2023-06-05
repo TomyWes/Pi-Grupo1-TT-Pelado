@@ -1,8 +1,13 @@
 * {
     box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
 }
 
 body {
@@ -204,7 +209,7 @@ header.dark-mode {
     justify-content: center;
     align-items: center;
     margin: 15px;
-    
+
 }
 
 .main-sections-h1 {
@@ -229,15 +234,15 @@ header.dark-mode {
 
 .dark-mode .main-sections-content a {
     color: white;
-  }
+}
 
-#song-detail {
+.detail-sections {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-  
+
 .song-name {
     font-size: 50px;
 }
