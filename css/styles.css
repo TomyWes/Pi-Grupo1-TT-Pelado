@@ -209,16 +209,9 @@ header.dark-mode {
 
 .main-sections-h1 {
     display: flex;
-    background-image: url(../img/background-header-lightmode.jpeg);
-    background-size: cover;
-    background-position: center;
     width: 300px;
     font-size: 30px;
     justify-content: center;
-}
-
-.main-sections-h1.dark-mode {
-    background-image: url(../img/sound-wave-background_132230-70.avif)
 }
 
 .main-sections-content {
