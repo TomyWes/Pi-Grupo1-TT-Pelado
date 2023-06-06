@@ -26,6 +26,7 @@ const modeToggle = document.querySelector('#mode-toggle');
 let preferredMode = localStorage.getItem('preferredMode');
 const header = document.querySelector('header');
 const headerNavLinks = document.querySelectorAll('.header-nav-link');
+const linkElements = document.querySelectorAll('a');
 const logo = document.querySelector('.header-section-logo');
 const searchBtn = document.querySelector('#search-button');
 const mainSectionsH1 = document.querySelectorAll('.main-sections-h1');
@@ -63,10 +64,11 @@ function enableDarkMode() {
     element.classList.add('dark-mode');
   });
 
-  document.a.classList.forEach(element => {
-    element.classList.add('dark-mode');
-  });
- 
+  for (let i = 0; i < linkElements.length; i++) {
+    const linkElement = linkElements[i];
+    linkElement.classList.add('dark-mode');
+  }
+
   /* Dark mode para el footer y su ul */
   footer.classList.add('dark-mode');
   footerUL.forEach(ul => {
@@ -101,9 +103,10 @@ function enableLightMode() {
   searchInput.classList.remove('dark-mode');
   searchBtn.classList.remove('dark-mode');
 
-  document.a.classList.forEach(element => {
-    element.classList.remove('dark-mode');
-  });
+  for (let i = 0; i < linkElements.length; i++) {
+    const linkElement = linkElements[i];
+    linkElement.classList.remove('dark-mode');
+  }
 
   mainSectionsH1.forEach(element => {;
     element.classList.remove('dark-mode');
