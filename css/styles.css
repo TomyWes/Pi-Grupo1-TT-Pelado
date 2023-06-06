@@ -7,7 +7,7 @@ a {
     color: black;
 }
 
-a.dark-mode {
+.dark-mode a {
     color: white;
 }
 
@@ -156,10 +156,6 @@ header.dark-mode {
     color: rgb(0, 0, 0);
 }
 
-.header-nav-link.dark-mode {
-    color: white;
-}
-
 .header-section-nav {
     display: flex;
     justify-content: center;
@@ -189,7 +185,6 @@ header.dark-mode {
 #mode-toggle.dark-mode {
     background-image: url(../img/bright-icon.png);
     background-position: center;
-    background-color: white;
 }
 
 .main-title {
