@@ -127,7 +127,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
 
     let songsHTML = '';
 
-    for (let i = 0; i < songs.length; i++) {
+    for (let i = 0; i < 8; i++) {
       const song = songs[i];
 
       songsHTML += `
@@ -157,7 +157,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums
 
     let albumsHTML = '';
 
-    for (let i = 0; i < albums.length; i++) {
+    for (let i = 0; i < 8; i++) {
       const album = albums[i];
 
       albumsHTML += `
@@ -186,7 +186,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
 
     let artistsHTML = '';
 
-    for (let i = 0; i < artists.length; i++) {
+    for (let i = 0; i < 8; i++) {
       const artist = artists[i];
 
       artistsHTML += `

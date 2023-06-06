@@ -207,9 +207,9 @@ header.dark-mode {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    overflow-x:scroll;
-    overflow-y: scroll;
     width: 90vw;
+    
+    margin-bottom: 40px;
 }
 
 .main-sections-h1 {
@@ -223,17 +223,23 @@ header.dark-mode {
     display: flex;
     flex-direction: row;
     margin: 10px;
-    height: 200px;
+    border: 1px;
+    border-color: white;
+    border-radius: 15%;
+    border-style: solid;
     max-width: 200px;
     background-image: url(../img/background-header-lightmode.jpeg);
 }
 
+
+
 .dark-mode .main-sections-content {
     background-image: url(../img/background-header.jpeg);
+    border-color: #0d0620;
 }
 
 .main-sections-content p {
-    max-width: 150px;
+    max-width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -250,6 +256,9 @@ header.dark-mode {
 
 .main-sections-content a {
     color: black;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .dark-mode .main-sections-content a {
