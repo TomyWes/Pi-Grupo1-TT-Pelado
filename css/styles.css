@@ -323,6 +323,9 @@ header.dark-mode {
     justify-content: center;
 }
 
+#search-results {
+    margin: 15px;
+}
 .loader {
     display: flex;
     justify-content: center;

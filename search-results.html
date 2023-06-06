@@ -27,7 +27,7 @@
 
         <section class="header-section-form">
             <form action="search-results.html" id="search-form">
-                <input type="text" class='border raleway' id="search-input" placeholder="Buscar...">
+                <input type="text" class='border raleway' id="search-input" name="term" placeholder="Buscar...">
                 <button type="submit" class="border" id="search-button"><i
                         class="fa-solid fa-magnifying-glass"></i></button>
             </form>
@@ -51,13 +51,12 @@
     <h1 class="main-title raleway">All the songs, All the time.</h1>
 
     <main>
-        <h1 class="results-h1 opensans">Resultados de búsqueda para:</h1>
-
         <div class="loader">
             <iframe src="./img/loader-gif.gif" frameborder="0"></iframe>
         </div>
 
         <section id="search-results">
+        
         </section>
 
         <p id="no-results" style="display: none;">No se encontraron coincidencias para el término ingresado.</p>
