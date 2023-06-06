@@ -4,6 +4,11 @@
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+a.dark-mode {
+    color: white;
 }
 
 ul {
@@ -249,6 +254,73 @@ header.dark-mode {
 
 .song-artist {
     font-size: 30px;
+}
+
+#main-genres {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#genres-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#genres-list h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#genres-list li {
+    margin: 15px;
+}
+
+#genres-list a {
+    color:black;
+}
+
+.dark-mode #genres-list a {
+    color:white;
+}
+
+#main-genres-detail {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#genre-artists {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#genre-artists a {
+    color:black;
+}
+
+.dark-mode #genre-artists a {
+    color:white;
+}
+
+#genre-artists h1{
+    display: flex;
+    justify-content: center;
+}
+
+#genre-artists li {
+    margin: 15px;
+}
+
+#genre-artists p {
+    display: flex;
+    justify-content: center;
 }
 
 .loader {
