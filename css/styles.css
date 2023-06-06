@@ -195,7 +195,7 @@ header.dark-mode {
 
 #home {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
@@ -204,28 +204,48 @@ header.dark-mode {
 
 .main-sections {
     display: flex;
-    width: 600px;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 15px;
-
+    overflow-x:scroll;
+    overflow-y: scroll;
+    width: 90vw;
 }
 
 .main-sections-h1 {
     display: flex;
     width: 300px;
-    font-size: 30px;
+    font-size: 40px;
     justify-content: center;
 }
 
 .main-sections-content {
     display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 200px;
+    max-width: 200px;
+    background-image: url(../img/background-header-lightmode.jpeg);
+}
+
+.dark-mode .main-sections-content {
+    background-image: url(../img/background-header.jpeg);
+}
+
+.main-sections-content p {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-sections-content img {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 15px;
-    height: 400px
+    border: 1px;
+    border-color: transparent;
+    border-radius: 100%;
+    border-style: solid;
 }
 
 .main-sections-content a {

@@ -27,6 +27,7 @@ const linkElements = document.querySelectorAll('a');
 const logo = document.querySelector('.header-section-logo');
 const searchBtn = document.querySelector('#search-button');
 const mainSectionsH1 = document.querySelectorAll('.main-sections-h1');
+const mainSectionsContent = document.querySelectorAll('.main-sections-content');
 const footer = document.querySelector('footer');
 const footerUL = document.querySelectorAll('.ul-footer');
 const borders = document.querySelectorAll('.border');
@@ -48,19 +49,19 @@ function enableDarkMode() {
     const linkElement = linkElements[i];
     linkElement.classList.add('dark-mode');
   }
-  const mainSectionsH1 = document.querySelectorAll('h1');
   for (let i = 0; i < mainSectionsH1.length; i++) {
     const element = mainSectionsH1[i];
     element.classList.add('dark-mode');
   }
-  const footer = document.querySelector('footer');
+  for (let i = 0; i < mainSectionsContent.length; i++) {
+    const element = mainSectionsContent[i];
+    element.classList.add('dark-mode');
+  }
   footer.classList.add('dark-mode');
-  const footerUL = document.querySelectorAll('footer ul');
   for (let i = 0; i < footerUL.length; i++) {
     const ul = footerUL[i];
     ul.classList.add('dark-mode');
   }
-  const borders = document.querySelectorAll('.border');
   for (let i = 0; i < borders.length; i++) {
     const border = borders[i];
     border.classList.add('dark-mode');
@@ -79,19 +80,19 @@ function enableLightMode() {
     const linkElement = linkElements[i];
     linkElement.classList.remove('dark-mode');
   }
-  const mainSectionsH1 = document.querySelectorAll('h1');
   for (let i = 0; i < mainSectionsH1.length; i++) {
     const element = mainSectionsH1[i];
     element.classList.remove('dark-mode');
   }
-  const footer = document.querySelector('footer');
+  for (let i = 0; i < mainSectionsContent.length; i++) {
+    const element = mainSectionsContent[i];
+    element.classList.remove('dark-mode');
+  }
   footer.classList.remove('dark-mode');
-  const footerUL = document.querySelectorAll('footer ul');
   for (let i = 0; i < footerUL.length; i++) {
     const ul = footerUL[i];
     ul.classList.remove('dark-mode');
   }
-  const borders = document.querySelectorAll('.border');
   for (let i = 0; i < borders.length; i++) {
     const border = borders[i];
     border.classList.remove('dark-mode');
@@ -122,7 +123,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
   })
   .then(function (data) {
     console.log(data)
-    const songs = data.data.slice(0, 5);
+    const songs = data.data
 
     let songsHTML = '';
 
@@ -132,10 +133,10 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
       songsHTML += `
         <article class="main-sections-content opensans">
           <a href="detail-song.html?id=${song.id}">
-            <h2>${song.title}</h2>
+            <p>${song.title}</p>
+            <img src="${song.album.cover}" alt="${song.title} Cover">
             <p>${song.artist.name}</p>
             <p>${song.album.title}</p>
-            <img src="${song.album.cover_medium}" alt="${song.title} Cover">
           </a>
         </article>
       `;
@@ -152,7 +153,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums
     return response.json();
   })
   .then(function (data) {
-    const albums = data.data.slice(0, 5);
+    const albums = data.data
 
     let albumsHTML = '';
 
@@ -162,9 +163,9 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums
       albumsHTML += `
         <article class="main-sections-content opensans">
           <a href="detail-album.html?id=${album.id}">
-            <h2>${album.title}</h2>
+            <p>${album.title}</p>
+            <img src="${album.cover}" alt="${album.title} Cover">
             <p>${album.artist.name}</p>
-            <img src="${album.cover_medium}" alt="${album.title} Cover">
           </a>
         </article>
       `;
@@ -181,7 +182,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
     return response.json();
   })
   .then(function (data) {
-    const artists = data.data.slice(0, 5);
+    const artists = data.data
 
     let artistsHTML = '';
 
@@ -191,8 +192,8 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
       artistsHTML += `
         <article class="main-sections-content opensans">
           <a href="detail-artist.html?id=${artist.id}">
-            <h2>${artist.name}</h2>
-            <img src="${artist.picture_medium}" alt="${artist.name} Picture">
+            <p>${artist.name}</p>
+            <img src="${artist.picture}" alt="${artist.name} Picture">
           </a>
         </article>
       `;
