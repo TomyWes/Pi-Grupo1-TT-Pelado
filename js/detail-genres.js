@@ -34,8 +34,8 @@ fetch(artistsUrl)
             artistsHTML += `
                 <li>
                     <a href="detail-artist.html?id=${artist.id}">
-                    <p class='raleway'>${artist.name}</p>
-                    <img src="${artist.picture_medium}" alt="${artist.name}">
+                    <h2 class='raleway'>${artist.name}</h2>
+                    <img class='invisible-border' src="${artist.picture_medium}" alt="${artist.name}">
                     </a>
                 </li>
             `;

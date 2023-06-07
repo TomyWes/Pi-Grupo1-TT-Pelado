@@ -24,7 +24,6 @@ const logo = document.querySelector('.header-section-logo');
 const searchBtn = document.querySelector('#search-button');
 const mainSectionsH1 = document.querySelectorAll('.main-sections-h1');
 const mainSectionsContent = document.querySelectorAll('.main-sections-content');
-const songDetailArticle = document.querySelector('.song-detail-article');
 const footer = document.querySelector('footer');
 const footerUL = document.querySelectorAll('.ul-footer');
 const borders = document.querySelectorAll('.border');
@@ -43,7 +42,6 @@ function enableDarkMode() {
   logo.classList.add('dark-mode');
   searchInput.classList.add('dark-mode');
   searchBtn.classList.add('dark-mode');
-  songDetailArticle.classList.add('dark-mode')
   for (let i = 0; i < linkElements.length; i++) {
     const linkElement = linkElements[i];
     linkElement.classList.add('dark-mode');
@@ -75,7 +73,6 @@ function enableLightMode() {
   logo.classList.remove('dark-mode');
   searchInput.classList.remove('dark-mode');
   searchBtn.classList.remove('dark-mode');
-  songDetailArticle.classList.remove('dark-mode');
   for (let i = 0; i < linkElements.length; i++) {
     const linkElement = linkElements[i];
     linkElement.classList.remove('dark-mode');
@@ -134,7 +131,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
         <article class="main-sections-content opensans">
           <a href="detail-song.html?id=${song.id}">
             <p>${song.title}</p>
-            <img src="${song.album.cover}" alt="${song.title} Cover">
+            <img class='invisible-border' src="${song.album.cover}" alt="${song.title} Cover">
             <p>${song.artist.name}</p>
             <p>${song.album.title}</p>
           </a>
@@ -164,7 +161,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums
         <article class="main-sections-content opensans">
           <a href="detail-album.html?id=${album.id}">
             <p>${album.title}</p>
-            <img src="${album.cover}" alt="${album.title} Cover">
+            <img class='invisible-border' src="${album.cover}" alt="${album.title} Cover">
             <p>${album.artist.name}</p>
           </a>
         </article>
@@ -193,7 +190,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
         <article class="main-sections-content opensans">
           <a href="detail-artist.html?id=${artist.id}">
             <p>${artist.name}</p>
-            <img src="${artist.picture}" alt="${artist.name} Picture">
+            <img class='invisible-border' src="${artist.picture}" alt="${artist.name} Picture">
           </a>
         </article>
       `;

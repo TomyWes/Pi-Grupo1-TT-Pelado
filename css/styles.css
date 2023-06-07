@@ -69,6 +69,13 @@ header.dark-mode {
     border-radius: 20px;
 }
 
+.invisible-border {
+    border: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 100%;
+}
+
 .header-section-logo {
     display: flex;
     justify-content: center;
@@ -249,10 +256,6 @@ header.dark-mode {
 .main-sections-content img {
     display: flex;
     justify-content: center;
-    border: 1px;
-    border-color: transparent;
-    border-radius: 100%;
-    border-style: solid;
 }
 
 .main-sections-content a {
@@ -274,7 +277,7 @@ header.dark-mode {
     margin: 30px;
 }
 
-.song-detail-article {
+.detail-article {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -285,18 +288,8 @@ header.dark-mode {
     border-radius: 20px;
 }
 
-.song-detail-article.dark-mode {
-    background-image: url(../img/3463945_63136.jpg);
-    background-position: center;
-    background-size:cover;
-}
-
 .song-detail-article img {
     width: 90%;
-    border: 1px;
-    border-style: solid;
-    border-color: transparent;
-    border-radius: 100%;
 }
 
 .song-name {
@@ -306,6 +299,14 @@ header.dark-mode {
 .song-artist {
     margin-top: 20px;
     font-size: 20px;
+}
+
+.artist-album {
+    margin-left: 20px;
+}
+
+.album-songs {
+    margin-left: 20px;
 }
 
 #main-genres {
@@ -322,9 +323,11 @@ header.dark-mode {
     flex-wrap: wrap;
 }
 
-#genres-list h1 {
+.genre-h2-name {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    text-overflow: ellipsis;
+    white-space: wrap;
 }
 
 #genres-list li {

@@ -15,8 +15,8 @@ fetch(genresUrl)
             genresHTML += `
                 <li>
                     <a href="detail-genres.html?id=${genre.id}">
-                        <h1 class='genre-h1-name raleway'>${genre.name}</h1>
-                        <img src="${genre.picture_medium}" alt="${genre.name}">
+                        <h2 class='genre-h2-name raleway'>${genre.name}</h2>
+                        <img class='invisible-border' src="${genre.picture_medium}" alt="${genre.name}">
                     </a>
                 </li>
             `;
