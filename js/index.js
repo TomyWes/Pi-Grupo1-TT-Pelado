@@ -17,7 +17,6 @@ searchForm.addEventListener('submit', function (e) {
 });
 
 const modeToggle = document.querySelector('#mode-toggle');
-let preferredMode = localStorage.getItem('preferredMode');
 const header = document.querySelector('header');
 const headerNavLinks = document.querySelectorAll('.header-nav-link');
 const linkElements = document.querySelectorAll('a');
@@ -25,11 +24,12 @@ const logo = document.querySelector('.header-section-logo');
 const searchBtn = document.querySelector('#search-button');
 const mainSectionsH1 = document.querySelectorAll('.main-sections-h1');
 const mainSectionsContent = document.querySelectorAll('.main-sections-content');
-const songDetailArticle = document.querySelector('.song-detail-article')
+const songDetailArticle = document.querySelector('.song-detail-article');
 const footer = document.querySelector('footer');
 const footerUL = document.querySelectorAll('.ul-footer');
 const borders = document.querySelectorAll('.border');
 
+let preferredMode = localStorage.getItem('preferredMode');
 if (preferredMode === 'dark-mode') {
   enableDarkMode();
 } else {
@@ -43,7 +43,7 @@ function enableDarkMode() {
   logo.classList.add('dark-mode');
   searchInput.classList.add('dark-mode');
   searchBtn.classList.add('dark-mode');
-  songDetailArticle.classList.add('dark-mode');
+  songDetailArticle.classList.add('dark-mode')
   for (let i = 0; i < linkElements.length; i++) {
     const linkElement = linkElements[i];
     linkElement.classList.add('dark-mode');
