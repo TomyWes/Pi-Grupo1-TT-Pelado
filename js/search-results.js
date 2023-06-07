@@ -1,13 +1,7 @@
 const loader = document.querySelector('.loader');
+loader.classList.remove('hidden');
 const searchResultsSection = document.querySelector('#search-results');
 const noResults = document.querySelector('#no-results');
-
-loader.classList.remove('hidden');
-
-setTimeout(() => {
-  loader.classList.add('hidden');
-}, 3000);
-
 const queryString = window.location.search;
 const searchParams = new URLSearchParams(queryString);
 const searchTerm = searchParams.get('term');

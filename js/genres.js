@@ -27,5 +27,3 @@ fetch(genresUrl)
     .catch(function (error) {
         console.log(error);
     });
-
-

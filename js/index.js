@@ -2,17 +2,14 @@ let searchForm = document.querySelector('#search-form');
 let searchInput = document.querySelector('#search-input');
 
 searchForm.addEventListener('submit', function (e) {
-  ;
   let searchTerm = searchInput.value.trim();
 
   if (searchTerm === '') {
-    ;
     e.preventDefault();
     alert('El campo de búsqueda está vacío');
     return;
   }
   if (searchTerm.length < 3) {
-    ;
     e.preventDefault();
     alert('La búsqueda debe tener al menos 3 cáracteres');
     return;
@@ -28,6 +25,7 @@ const logo = document.querySelector('.header-section-logo');
 const searchBtn = document.querySelector('#search-button');
 const mainSectionsH1 = document.querySelectorAll('.main-sections-h1');
 const mainSectionsContent = document.querySelectorAll('.main-sections-content');
+const songDetailArticle = document.querySelector('.song-detail-article')
 const footer = document.querySelector('footer');
 const footerUL = document.querySelectorAll('.ul-footer');
 const borders = document.querySelectorAll('.border');
@@ -45,6 +43,7 @@ function enableDarkMode() {
   logo.classList.add('dark-mode');
   searchInput.classList.add('dark-mode');
   searchBtn.classList.add('dark-mode');
+  songDetailArticle.classList.add('dark-mode');
   for (let i = 0; i < linkElements.length; i++) {
     const linkElement = linkElements[i];
     linkElement.classList.add('dark-mode');
@@ -76,6 +75,7 @@ function enableLightMode() {
   logo.classList.remove('dark-mode');
   searchInput.classList.remove('dark-mode');
   searchBtn.classList.remove('dark-mode');
+  songDetailArticle.classList.remove('dark-mode');
   for (let i = 0; i < linkElements.length; i++) {
     const linkElement = linkElements[i];
     linkElement.classList.remove('dark-mode');
