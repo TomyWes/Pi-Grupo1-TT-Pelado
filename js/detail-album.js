@@ -28,7 +28,7 @@ fetch(url)
       }
 
     let albumRelease = document.querySelector('.album-release');
-    albumRelease.innerText += data.release_date;
+    albumRelease.innerHTML += data.release_date;
 
     let albumSongs = document.querySelector('.album-songs');
     let trackList = '';

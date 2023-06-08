@@ -10,7 +10,7 @@ fetch(genresUrl)
         let genresList = document.querySelector('#genres-list');
         let genresHTML = '';
 
-        for (let i = 0; i < data.data.length; i++) {
+        for (let i = 1; i < data.data.length; i++) {
             let genre = data.data[i];
             genresHTML += `
                 <li>

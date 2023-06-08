@@ -381,11 +381,12 @@ header.dark-mode {
 #search-results {
     margin: 15px;
 }
+
 .loader {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 300px;
 }
 
 .loader.hidden {
