@@ -56,17 +56,14 @@ header.dark-mode {
 }
 
 .border {
-    border: 3px;
+    border: 2px;
     border-color: rgb(0, 0, 0);
     border-style: solid;
     border-radius: 20px;
 }
 
 .border.dark-mode {
-    border: 3px;
     border-color: white;
-    border-style: solid;
-    border-radius: 20px;
 }
 
 .invisible-border {
@@ -116,10 +113,11 @@ header.dark-mode {
 
 #search-input {
     width: 400px;
-    height: 30px;
-    margin-right: 5px;
+    height: 40px;
+    margin-right: 10px;
     color: black;
     background-color: white;
+    padding: 10px;
 }
 
 #search-input::placeholder {
@@ -140,7 +138,8 @@ header.dark-mode {
 }
 
 #search-button {
-    height: 30px;
+    height: 40px;
+    width: 45px;
     cursor: pointer;
     background-color: white;
 }
