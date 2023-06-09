@@ -93,7 +93,7 @@ header.dark-mode {
 
 .header-img-logo {
     display: flex;
-    width: 150px;
+    width: 130px;
     height: 130px;
     margin: 10px;
     padding: 10px;
@@ -411,8 +411,6 @@ footer {
 
 footer.dark-mode {
     background-image: url(../img/background-header.jpeg);
-    background-position: center;
-    background-repeat: repeat;
     background-size: 55%;
     border-color: white;
 }
