@@ -134,7 +134,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
       songsHTML += `
         <article class="main-sections-content opensans">
           <a href="detail-song.html?id=${song.id}">
-            <p>${song.title}</p>
+            <h1>${song.title}</h1>
             <img class='invisible-border' src="${song.album.cover}" alt="${song.title} Cover">
             <p>${song.artist.name}</p>
             <p>${song.album.title}</p>
@@ -166,7 +166,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums
       albumsHTML += `
         <article class="main-sections-content opensans">
           <a href="detail-album.html?id=${album.id}">
-            <p>${album.title}</p>
+            <h1>${album.title}</h1>
             <img class='invisible-border' src="${album.cover}" alt="${album.title} Cover">
             <p>${album.artist.name}</p>
           </a>
@@ -197,7 +197,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
       artistsHTML += `
         <article class="main-sections-content opensans">
           <a href="detail-artist.html?id=${artist.id}">
-            <p>${artist.name}</p>
+            <h1>${artist.name}</h1>
             <img class='invisible-border' src="${artist.picture}" alt="${artist.name} Picture">
           </a>
         </article>

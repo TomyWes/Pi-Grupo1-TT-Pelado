@@ -6,25 +6,20 @@ const queryString = window.location.search;
 const searchParams = new URLSearchParams(queryString);
 const searchTerm = searchParams.get('term');
 
-if (!searchTerm) {
-  noResults.style.display = 'block';
-} else {
-  const searchUrl = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${encodeURIComponent(searchTerm)}`;
+const searchUrl = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${encodeURIComponent(searchTerm)}`;
 
-  fetch(searchUrl)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      console.log(data);
+fetch(searchUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
 
-      loader.classList.add('hidden');
+    loader.classList.add('hidden');
 
-      if (data.data.length === 0) {
-        noResults.style.display = 'block';
-        return;
-      }
-
+    if (data.data.length === 0) {
+      noResults.style.display = 'block';
+    } else {
       let searchResultsHTML = '';
 
       searchResultsHTML += `<h1 class='raleway'>Resultados de búsqueda para: ${searchTerm}</h1>`;
@@ -46,8 +41,8 @@ if (!searchTerm) {
       }
 
       searchResultsSection.innerHTML = searchResultsHTML;
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-}
+    }
+  })
+  .catch(function (error) {
+    console.log(error);
+  });

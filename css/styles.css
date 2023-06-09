@@ -237,12 +237,20 @@ header.dark-mode {
     max-width: 200px;
     background-image: url(../img/vivid-blurred-colorful-wallpaper-background.jpg);
     background-position:left;
+    padding: 10px;
 }
 
 .dark-mode .main-sections-content {
     border-color: #0d0620;
     background-image: url(../img/3463945_63136.jpg);
     background-size: cover;
+}
+
+.main-sections-content h1 {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .main-sections-content p {
