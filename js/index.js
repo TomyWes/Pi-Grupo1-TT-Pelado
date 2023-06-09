@@ -113,8 +113,8 @@ function toggleMode() {
 
 modeToggle.addEventListener('click', toggleMode);
 
-const loader = document.querySelector('.loader');
-loader.classList.remove('hidden');
+/* const loader = document.querySelector('.loader'); 
+loader.classList.remove('hidden'); */
 const songsSection = document.querySelector('.songs');
 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks')
   .then(function (response) {
@@ -122,7 +122,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
   })
   .then(function (data) {
     console.log(data)
-    loader.classList.add('hidden');
+    /* loader.classList.add('hidden'); */
 
     const songs = data.data
 
@@ -154,7 +154,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums
     return response.json();
   })
   .then(function (data) {
-    loader.classList.add('hidden');
+    /* loader.classList.add('hidden'); */
 
     const albums = data.data
 
@@ -185,7 +185,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
     return response.json();
   })
   .then(function (data) {
-    loader.classList.add('hidden');
+    /* loader.classList.add('hidden'); */
     
     const artists = data.data
 
