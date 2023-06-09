@@ -42,3 +42,32 @@ fetch(url)
 
 console.log(queryString);
 console.log(queryStringObj);
+
+let playlist = [];
+
+let playlistStorage = localStorage.getItem('playlist');
+
+if (playlistStorage != null) {
+    playlist = JSON.parse(playlistStorage);
+}
+
+let btnPlaylist = document.querySelector('#btn-playlist');
+let btnText = document.querySelector('.btn-playlist-span');
+
+if (playlist.includes(id)) {
+    btnText.innerText = 'Remove from Playlist';
+}
+
+btnPlaylist.addEventListener('click', function(e) {
+    if (playlist.includes(id)) {
+        let index = playlist.indexOf(id)
+        playlist.splice(index, 1);
+        btnText.innerText = 'Add to Playlist';
+    } else {
+        playlist.push(id);
+        btnText.innerText = 'Remove from Playlist';
+    }
+
+    let playlistToString =JSON.stringify(playlist);
+    localStorage.setItem('playlist', playlistToString)
+})
