@@ -6,12 +6,12 @@ searchForm.addEventListener('submit', function (e) {
 
   if (searchTerm === '') {
     e.preventDefault();
-    alert('El campo de búsqueda está vacío');
+    alert('The search field is empty');
     return;
   }
   if (searchTerm.length < 3) {
     e.preventDefault();
-    alert('La búsqueda debe tener al menos 3 cáracteres');
+    alert('The search term must have at least 3 characters');
     return;
   }
 });

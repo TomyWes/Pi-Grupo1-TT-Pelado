@@ -22,7 +22,7 @@ fetch(searchUrl)
     } else {
       let searchResultsHTML = '';
 
-      searchResultsHTML += `<h1 class='raleway'>Resultados de búsqueda para: ${searchTerm}</h1>`;
+      searchResultsHTML += `<h1 class='raleway'>Search results for: ${searchTerm}</h1>`;
       searchResultsHTML += '<ul class="search-results-ul opensans">';
 
       for (let i = 0; i < data.data.length; i++) {

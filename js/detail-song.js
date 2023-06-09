@@ -24,7 +24,7 @@ fetch(url)
         songAlbum.innerHTML += `<a href="detail-album.html?id=${data.album.id}">${data.album.title}</a>`;
 
         let durationSong = document.querySelector('.duration-song')
-        durationSong.innerHTML += data.duration + ` segundos`
+        durationSong.innerHTML += data.duration + ` seconds`
 
         let releaseSong = document.querySelector('.release-song')
         releaseSong.innerHTML += data.release_date
