@@ -234,10 +234,10 @@ header.dark-mode {
     border-color: white;
     border-radius: 15%;
     border-style: solid;
-    max-width: 200px;
+    max-width: 130px;
     background-image: url(../img/vivid-blurred-colorful-wallpaper-background.jpg);
     background-position:left;
-    padding: 10px;
+    padding: 5px;
 }
 
 .dark-mode .main-sections-content {
@@ -251,6 +251,8 @@ header.dark-mode {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .main-sections-content p {
@@ -269,7 +271,7 @@ header.dark-mode {
     color: black;
     display: flex;
     flex-direction: column;
-
+    align-items: center;
 }
 
 .dark-mode .main-sections-content a {
