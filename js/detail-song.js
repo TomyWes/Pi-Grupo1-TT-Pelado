@@ -31,9 +31,9 @@ fetch(url)
 
         let explicitSong = document.querySelector('.explicit-song')
         if (data.explicit_lyrics === true) {
-            explicitSong.innerHTML += "Contiene letras explícitas"
+            explicitSong.innerHTML += "Contains explicit lyrics"
           } else {
-            explicitSong.innerHTML += "No contiene letras explícitas";
+            explicitSong.innerHTML += "Does not contain explicit lyrics";
           }
     })
     .catch(function (error) {
