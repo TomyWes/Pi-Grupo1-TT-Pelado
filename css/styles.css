@@ -52,7 +52,8 @@ header.dark-mode {
     background-position: center;
     background-repeat: repeat;
     background-size: 55%;
-    border-color: white;
+    border-bottom: white;
+    border-style: solid;
 }
 
 .border {
@@ -322,11 +323,31 @@ body.dark-mode .detail-article {
 }
 
 .artist-name {
-    font-size: 35px;
+    font-size: 30px;
 }
 
-.album-songs {
+.song-name {
+    font-size: 30px;
+}
+
+.album-name {
+    font-size: 30px;
+}
+
+.album-songs-h1 {
     margin-left: 20px;
+    font-size: 30px;
+}
+
+.album-songs-ol {
+    font-size: 15px;
+    margin-left: 10px;
+    max-height: 300px;
+    overflow: scroll;
+}
+
+.album-songs-ol li {
+    max-width: 100px;
 }
 
 .detail-artist-album-li {
@@ -491,7 +512,9 @@ footer {
 footer.dark-mode {
     background-image: url(../img/background-header.jpeg);
     background-size: 55%;
-    border-color: white;
+    border-bottom: white;
+    border-top: white;
+    border-style: solid;
 }
 
 .ul-footer {

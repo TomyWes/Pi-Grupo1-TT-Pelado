@@ -30,14 +30,14 @@ fetch(url)
     let albumRelease = document.querySelector('.album-release');
     albumRelease.innerHTML += data.release_date;
 
-    let albumSongs = document.querySelector('.album-songs');
+    let albumSongs = document.querySelector('.album-songs-ol');
     let trackList = '';
     
     for (let i = 0; i < data.tracks.data.length; i++) {
       const track = data.tracks.data[i];
-      trackList += `<li><a href="detail-song.html?id=${track.id}">${track.title}</a></li>`;
+      trackList += `<li class='opensans'><p><a href="detail-song.html?id=${track.id}">${track.title}</a></p></li>`;
     }
-    albumSongs.innerHTML += `<ul>${trackList}</ul>`;
+    albumSongs.innerHTML += trackList;
 })
 .catch(function(error){
     console.log(error)
