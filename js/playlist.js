@@ -26,7 +26,7 @@ if (playlist === null) {
             .then(function (data) {
                 playlistSongs.innerHTML += `
           <li class='opensans'>
-            <a href="detail-song.html?id=${data.id}">
+            <a class='playlist-content' href="detail-song.html?id=${data.id}">
                 <h2 class='raleway'>${data.title}</h2>
                 <img class='invisible-border' src="${data.album.cover}" alt="data.titel">
             </a>

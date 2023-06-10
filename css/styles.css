@@ -77,13 +77,13 @@ header.dark-mode {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    margin: 10px;
 }
 
 .header-section-logo.dark-mode {
     background: black;
     border: 1px;
-    border-radius: 100px;
+    border-radius: 100%;
     border-color: transparent;
     border-style: solid;
 }
@@ -92,27 +92,26 @@ header.dark-mode {
     display: flex;
     width: 130px;
     height: 130px;
-    margin: 10px;
     padding: 10px;
 }
 
 .header-section-form {
     display: flex;
     width: 500px;
-    margin: 10px;
+    margin-left: 10px;
     justify-content: center;
     align-items: center;
 }
 
 #search-form {
     display: flex;
-    width: 400px;
+    width: 500px;
     align-items: center;
     justify-content: center;
 }
 
 #search-input {
-    width: 400px;
+    width: 500px;
     height: 40px;
     margin-right: 10px;
     color: black;
@@ -153,13 +152,15 @@ header.dark-mode {
     display: flex;
     list-style-type: none;
     flex-direction: row;
-    font-size: 30px;
+    font-size: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .header-nav-link {
     display: flex;
     align-items: center;
-    margin: 25px;
+    margin: 20px;
     color: rgb(0, 0, 0);
 }
 
@@ -176,6 +177,7 @@ header.dark-mode {
     width: 100px;
     justify-content: center;
     align-items: center;
+    margin-left: 10px;
 }
 
 #mode-toggle {
@@ -306,6 +308,7 @@ body.dark-mode .detail-article {
 .detail-article h2 {
     font-weight: bolder;
 }
+
 .song-detail-article img {
     width: 90%;
 }
@@ -318,8 +321,16 @@ body.dark-mode .detail-article {
     margin-left: 20px;
 }
 
+.artist-name {
+    font-size: 35px;
+}
+
 .album-songs {
     margin-left: 20px;
+}
+
+.detail-artist-album-li {
+    margin: 10px;
 }
 
 #main-genres {
@@ -420,16 +431,45 @@ body.dark-mode .detail-article {
     margin-bottom: 10px;
 }
 
-#playlist-section h1 {
-    font-size: 40px;
-    margin: 20px;
-}
 #playlist-songs {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     margin: 20px;
+}
+
+.playlist-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+    padding: 10px;
+    background-image: url(../img/vivid-blurred-colorful-wallpaper-background.jpg);
+    border: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 20px;
+}
+
+body.dark-mode .playlist-content {
+    background-image: url(../img/3463945_63136.jpg);
+    background-size: cover;
+    border-color: #0d0620;
+}
+
+#playlist-section h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+#playlist-section h2 {
+    display: flex;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 footer {
@@ -480,18 +520,27 @@ footer.dark-mode {
     background: -webkit-linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);  
     background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); 
     border-radius: 8px;
-    color: #fff;
+    color: black;
     display: flex;
     font-size: 18px;
     padding: 4px;
     cursor: pointer;
 }
 
+body.dark-mode #btn-playlist {
+    color:white;
+}
+
 .btn-playlist-span{
-    background-color: #111;
+    background-color: white;
     padding: 16px 24px;
     border-radius: 6px;
-}  
+}
+
+ body.dark-mode .btn-playlist-span {
+    background-color: black;
+ }
+
 .btn-playlist-span:hover{
     background: #12c2e9; 
 background: -webkit-linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);  

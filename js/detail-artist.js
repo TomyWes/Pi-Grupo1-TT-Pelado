@@ -30,7 +30,7 @@ fetch(url)
 
         for (let i = 0; i < albumsData.data.length; i++) {
             let album = albumsData.data[i];
-            albumsList += `<li><a href="detail-album.html?id=${album.id}">${album.title}</a></li>`;
+            albumsList += `<li class='detail-artist-album-li opensans'><a href="detail-album.html?id=${album.id}">${album.title}</a></li>`;
           }
 
     artistAlbum.innerHTML += `<ul>${albumsList}</ul>`;
