@@ -232,7 +232,7 @@ header.dark-mode {
     margin: 10px;
     border: 1px;
     border-color: white;
-    border-radius: 15%;
+    border-radius: 20px;
     border-style: solid;
     max-width: 130px;
     background-image: url(../img/vivid-blurred-colorful-wallpaper-background.jpg);
@@ -415,7 +415,6 @@ header.dark-mode {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 
 footer {
     display: flex;
