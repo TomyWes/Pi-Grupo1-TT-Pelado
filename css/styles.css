@@ -330,6 +330,13 @@ header.dark-mode {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#genres-list h2{
+    display: flex;
+    justify-content: center;
 }
 
 .genre-h2-name {
