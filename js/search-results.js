@@ -1,8 +1,9 @@
 const loader = document.querySelector('.loader');
 loader.classList.remove('hidden');
+
 const searchResultsSection = document.querySelector('#search-results');
 const noResults = document.querySelector('#no-results');
-const queryString = window.location.search;
+const queryString = location.search;
 const searchParams = new URLSearchParams(queryString);
 const searchTerm = searchParams.get('term');
 
@@ -23,7 +24,7 @@ fetch(searchUrl)
       let searchResultsHTML = '';
 
       searchResultsHTML += `<h1 class='raleway'>Search results for: ${searchTerm}</h1>`;
-      searchResultsHTML += '<ul class="search-results-ul opensans">';
+      searchResultsHTML += '<ol class="search-results-ul opensans">';
 
       for (let i = 0; i < data.data.length; i++) {
         const result = data.data[i];

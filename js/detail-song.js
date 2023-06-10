@@ -4,7 +4,8 @@ let queryStringObj = new URLSearchParams(queryString);
 let id = queryStringObj.get('id');
 let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/' + id;
 
-
+let previewContainer = document.querySelector('#preview-song');
+let previewAudio = document.querySelector('#preview-audio');
 
 fetch(url)
     .then(function (response) {
@@ -34,9 +35,20 @@ fetch(url)
         let explicitSong = document.querySelector('.explicit-song')
         if (data.explicit_lyrics === true) {
             explicitSong.innerHTML += "Contains explicit lyrics"
-          } else {
+        } else {
             explicitSong.innerHTML += "Does not contain explicit lyrics";
-          }
+        }
+
+        let previewUrl = data.preview;
+        if (previewUrl) {
+            previewAudio.src = previewUrl;
+
+            previewAudio.load();
+
+            previewContainer.style.display = 'block';
+        } else {
+            previewContainer.style.display = 'none';
+        }
     })
     .catch(function (error) {
         console.log(error);
@@ -44,9 +56,6 @@ fetch(url)
 
 console.log(queryString);
 console.log(queryStringObj);
-
-let deezerWidget = document.querySelector('#widget-deezer');
-deezerWidget.innerHTML = '<iframe src="https://widget.deezer.com/widget/dark/track/' + id +'" width="170" height="70" frameborder="0" allowtransparency="false" allow="encrypted-media; clipboard-write"></iframe>';
 
 let playlist = [];
 
@@ -63,7 +72,7 @@ if (playlist.includes(id)) {
     btnText.innerText = 'Remove from Playlist';
 }
 
-btnPlaylist.addEventListener('click', function(e) {
+btnPlaylist.addEventListener('click', function (e) {
     if (playlist.includes(id)) {
         let index = playlist.indexOf(id)
         playlist.splice(index, 1);
@@ -73,6 +82,6 @@ btnPlaylist.addEventListener('click', function(e) {
         btnText.innerText = 'Remove from Playlist';
     }
 
-    let playlistToString =JSON.stringify(playlist);
+    let playlistToString = JSON.stringify(playlist);
     localStorage.setItem('playlist', playlistToString)
 })
