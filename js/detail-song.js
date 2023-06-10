@@ -4,6 +4,8 @@ let queryStringObj = new URLSearchParams(queryString);
 let id = queryStringObj.get('id');
 let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/' + id;
 
+
+
 fetch(url)
     .then(function (response) {
         return response.json();
@@ -42,6 +44,9 @@ fetch(url)
 
 console.log(queryString);
 console.log(queryStringObj);
+
+let deezerWidget = document.querySelector('#widget-deezer');
+deezerWidget.innerHTML = '<iframe src="https://widget.deezer.com/widget/dark/track/' + id +'" width="170" height="70" frameborder="0" allowtransparency="false" allow="encrypted-media; clipboard-write"></iframe>';
 
 let playlist = [];
 

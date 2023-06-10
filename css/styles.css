@@ -402,6 +402,14 @@ header.dark-mode {
     display: none;
 }
 
+#widget-deezer{
+    max-width: 170px;
+    max-height: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
 footer {
     display: flex;
     flex-direction: column;
