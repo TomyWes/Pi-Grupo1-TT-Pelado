@@ -217,7 +217,7 @@ header.dark-mode {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-   /* overflow-x: scroll; */
+    /* overflow-x: scroll; */
     width: 90vw;
     margin-bottom: 40px;
 }
@@ -239,7 +239,7 @@ header.dark-mode {
     border-style: solid;
     max-width: 130px;
     background-image: url(../img/vivid-blurred-colorful-wallpaper-background.jpg);
-    background-position:left;
+    background-position: left;
     padding: 5px;
 }
 
@@ -297,7 +297,7 @@ header.dark-mode {
     padding: 10px;
     border: 1px;
     border-style: solid;
-    border-color: transparent;
+    border-color: white;
     border-radius: 20px;
     max-width: 700px;
 }
@@ -305,6 +305,8 @@ header.dark-mode {
 body.dark-mode .detail-article {
     background-image: url(../img/3463945_63136.jpg);
     background-size: cover;
+    background-position: center;
+    border-color: #0d0620;
 }
 
 .detail-article h2 {
@@ -335,7 +337,7 @@ body.dark-mode .detail-article {
     font-size: 30px;
 }
 
-.album-songs-article{
+.album-songs-article {
     max-width: 500px;
     margin-left: 20px;
 }
@@ -352,13 +354,15 @@ body.dark-mode .detail-article {
 .album-songs-ol {
     font-size: 15px;
     margin-left: 10px;
-    max-height: 500px;
+    max-height: 400px;
     max-width: 500px;
     overflow-y: scroll;
 }
 
 .album-songs-ol li {
-    max-width: 350px;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
 }
 
 .detail-artist-album-li {
@@ -381,7 +385,7 @@ body.dark-mode .detail-article {
     padding-right: 20px;
 }
 
-#genres-list h2{
+#genres-list h2 {
     display: flex;
     justify-content: center;
 }
@@ -398,11 +402,11 @@ body.dark-mode .detail-article {
 }
 
 #genres-list a {
-    color:black;
+    color: black;
 }
 
 .dark-mode #genres-list a {
-    color:white;
+    color: white;
 }
 
 #main-genres-detail {
@@ -420,14 +424,14 @@ body.dark-mode .detail-article {
 }
 
 #genre-artists a {
-    color:black;
+    color: black;
 }
 
 .dark-mode #genre-artists a {
-    color:white;
+    color: white;
 }
 
-#genre-artists h1{
+#genre-artists h1 {
     display: flex;
     justify-content: center;
 }
@@ -456,14 +460,54 @@ body.dark-mode .detail-article {
     display: none;
 }
 
-#preview-song{
+#preview-song {
     max-width: 170px;
     max-height: 70px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+#btn-playlist {
+    border: 0;
+    background: #12c2e9;
+    background: -webkit-linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);
+    background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);
+    border-radius: 8px;
+    color: black;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+}
 
+body.dark-mode #btn-playlist {
+    color: white;
+    background: #ff00cc;
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #333399, #ff00cc);
+}
+
+.btn-playlist-span {
+    background-color: white;
+    padding: 16px 24px;
+    border-radius: 6px;
+}
+
+body.dark-mode .btn-playlist-span {
+    background-color: #0d0620;
+}
+
+.btn-playlist-span:hover {
+    background: #12c2e9;
+    background: -webkit-linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);
+    background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);
+}
+
+body.dark-mode .btn-playlist-span:hover {
+    background: #ff00cc; 
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc); 
+    background: linear-gradient(to right, #333399, #ff00cc); 
+}
 
 #playlist-songs {
     display: flex;
@@ -548,39 +592,6 @@ footer.dark-mode {
 
 .li-footer {
     font-size: 20px;
-}
-
-#btn-playlist {
-    border: 0;
-    background: #12c2e9; 
-    background: -webkit-linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);  
-    background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); 
-    border-radius: 8px;
-    color: black;
-    display: flex;
-    font-size: 18px;
-    padding: 4px;
-    cursor: pointer;
-}
-
-body.dark-mode #btn-playlist {
-    color:white;
-}
-
-.btn-playlist-span{
-    background-color: white;
-    padding: 16px 24px;
-    border-radius: 6px;
-}
-
- body.dark-mode .btn-playlist-span {
-    background-color: black;
- }
-
-.btn-playlist-span:hover{
-    background: #12c2e9; 
-background: -webkit-linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);  
-background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);   
 }
 
 @media (max-width: 450px) {
