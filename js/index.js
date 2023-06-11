@@ -186,7 +186,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
   })
   .then(function (data) {
     /* loader.classList.add('hidden'); */
-    
+
     const artists = data.data
 
     let artistsHTML = '';
