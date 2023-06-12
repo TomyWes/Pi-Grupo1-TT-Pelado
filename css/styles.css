@@ -604,12 +604,13 @@ footer.dark-mode {
     }
 
     header {
-        max-height: 15vh;
+        max-height: 13vh;
         width: 100vw;
     }
 
     .main-title{
         width: 100vw;
+        height: 7vh;
     }
 
     .header-section-logo {
@@ -805,8 +806,25 @@ footer.dark-mode {
         margin: 2px;
     }
 
+    .song-image{
+        width: 40vw;
+    }
+
+    #preview-audio{
+        max-height: 70px;
+        width: 40vw;
+    }
+
+    #playlist-songs{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 0px;
+    }
+
     footer {
-        max-height: 40px;
+        max-height: 5vh;
         width: 100vw;
     }
 
