@@ -596,16 +596,25 @@ footer.dark-mode {
 
 @media (max-width: 451px) {
     body {
-        width: 450px;
+        max-width: 450px;
+    }
+
+    main{
+        width: 100vw;
     }
 
     header {
-        max-height: 90px;
-        width: 450px;
+        max-height: 15vh;
+        width: 100vw;
+    }
+
+    .main-title{
+        width: 100vw;
     }
 
     .header-section-logo {
-        max-width: 20vh;
+        max-width: 15vw;
+        max-height: 15vh;
         margin: 0px;
     }
 
@@ -614,15 +623,15 @@ footer.dark-mode {
     }
 
     .header-img-logo {
-        width: 80px;
-        height: 70px;
+        width: 15vw;
+        height: 10vh;
         margin: 5px;
         padding: 5px;
     }
 
     .header-section-form {
-        max-width: 40vh;
-        margin-left: 20px;
+        max-width: 50vw;
+        margin-left: 0%;
         margin-right: 0px;
         border: none;
     }
@@ -632,21 +641,21 @@ footer.dark-mode {
     }
 
     #search-form {
-        max-width: 150px;
-        width: 180px;
+        max-width: 40vw;
+        width: 40vw;
     }
 
     #search-input {
-        max-width: 150px;
+        max-width: 35vw;
     }
 
     #search-button {
         height: 40px;
-        width: 60px;
+        width: 10vw;
     }
 
     .header-section-nav {
-        max-width: 30vh;
+        max-width: 20vw;
         border: none;
         margin: 0px;
     }
@@ -659,7 +668,11 @@ footer.dark-mode {
         max-width: 80px;
         font-size: 15px;
         flex-direction: column;
-        margin-right: 30px;
+        margin: 10px;
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .header-nav-link {
@@ -667,7 +680,7 @@ footer.dark-mode {
     }
 
     .header-section-mode {
-        max-width: 20vh;
+        max-width: 15vw;
         flex-direction: column;
         margin-right: 5px;
         margin-left: 0px;
@@ -683,16 +696,118 @@ footer.dark-mode {
         flex-direction: row;
         justify-content: flex-start;
         overflow-x: scroll;
-        width: 100%;
+        width: 100vw;
     }
 
     .main-sections-h1 {
         justify-content: center;
     }
 
+    .artist-name{
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .detail-article{
+        width: 40vw;
+        max-height: 400px;
+        padding: 0px;
+    }
+    
+
+    .artist-image{
+        width: 40vw;
+    }
+
+    .artist-album{
+        width: 60vw;
+        margin-top: 0px;
+        max-height: 250px;
+        margin-bottom: 0px;
+        font-size: 20px;
+    }
+
+    .artist-album h2{
+        max-height: 50px;
+    }
+
+    .artist-album ol{
+        padding-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        max-height: 200px;
+    }
+
+    .detail-artist-album-li{
+        font-size: 15px;
+        height: 40px;
+        overflow: hidden;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .album-name{
+        font-size: 20px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        max-height: 40vh;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .album-name h2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .album-image{
+        width: 35vw;
+    }
+
+    .album-detail-ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .album-detail-ul li{
+        width: 38vw;
+    }
+
+    .album-detail-ul li p{
+        margin: 5px;
+    }
+
+    .album-songs-h1{
+        font-size: 20px;
+        max-height: 30px;
+    }
+
+    .album-songs-article{
+        max-height: 400px;
+    }
+
+    .album-songs-ol{
+        max-height: 300px;
+    }
+
+    .album-songs-ol li p{
+        margin: 2px;
+    }
+
     footer {
         max-height: 40px;
-        width: 100%;
+        width: 100vw;
     }
 
     .ul-footer {
