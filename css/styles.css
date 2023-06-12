@@ -594,19 +594,23 @@ footer.dark-mode {
     font-size: 20px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 451px) {
     body {
-        max-width: 450px;
+        width: 450px;
     }
 
     header {
         max-height: 90px;
-        width: 100%;
-        overflow: auto;
+        width: 450px;
     }
 
     .header-section-logo {
-        max-width: 80px;
+        max-width: 20vh;
+        margin: 0px;
+    }
+
+    .header-section-logo.dark-mode{
+        margin: 0px;
     }
 
     .header-img-logo {
@@ -617,8 +621,8 @@ footer.dark-mode {
     }
 
     .header-section-form {
-        max-width: 180px;
-        margin-left: 25px;
+        max-width: 40vh;
+        margin-left: 20px;
         margin-right: 0px;
         border: none;
     }
@@ -642,8 +646,9 @@ footer.dark-mode {
     }
 
     .header-section-nav {
-        max-width: 80px;
+        max-width: 30vh;
         border: none;
+        margin: 0px;
     }
 
     .header-section-nav.dark-mode {
@@ -662,8 +667,10 @@ footer.dark-mode {
     }
 
     .header-section-mode {
-        max-width: 80px;
+        max-width: 20vh;
         flex-direction: column;
+        margin-right: 5px;
+        margin-left: 0px;
     }
 
     #mode-toggle {
@@ -674,7 +681,9 @@ footer.dark-mode {
     .main-sections {
         display: flex;
         flex-direction: row;
+        justify-content: flex-start;
         overflow-x: scroll;
+        width: 100%;
     }
 
     .main-sections-h1 {
