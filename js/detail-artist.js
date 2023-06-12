@@ -33,7 +33,7 @@ fetch(url)
             albumsList += `<li class='detail-artist-album-li opensans'><a href="detail-album.html?id=${album.id}">${album.title}</a></li>`;
           }
 
-    artistAlbum.innerHTML += `<ul>${albumsList}</ul>`;
+    artistAlbum.innerHTML += `<ol>${albumsList}</ol>`;
     })
 })
 .catch(function(error){
