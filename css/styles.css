@@ -45,139 +45,139 @@ header {
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
-  }
-  
-  header.dark-mode {
+}
+
+header.dark-mode {
     background-image: url(../img/background-header.jpeg);
     background-position: center;
     background-repeat: repeat;
     background-size: 55%;
     border-bottom: white;
     border-style: solid;
-  }
-  
-  .border {
+}
+
+.border {
     border: 2px;
     border-color: rgb(0, 0, 0);
     border-style: solid;
     border-radius: 20px;
-  }
-  
-  .border.dark-mode {
+}
+
+.border.dark-mode {
     border-color: white;
-  }
-  
-  .invisible-border {
+}
+
+.invisible-border {
     border: 1px;
     border-style: solid;
     border-color: transparent;
     border-radius: 100%;
-  }
-  
-  .header-section-logo {
+}
+
+.header-section-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
-  }
-  
-  .header-section-logo.dark-mode {
+}
+
+.header-section-logo.dark-mode {
     background: black;
     border: 1px;
     border-radius: 100%;
     border-color: transparent;
     border-style: solid;
-  }
-  
-  .header-img-logo {
+}
+
+.header-img-logo {
     display: flex;
     width: 130px;
     height: 130px;
     padding: 10px;
-  }
-  
-  .header-section-form {
+}
+
+.header-section-form {
     display: flex;
     width: 500px;
     margin-left: 10px;
     justify-content: center;
     align-items: center;
-  }
-  
-  #search-form {
+}
+
+#search-form {
     display: flex;
     width: 500px;
     align-items: center;
     justify-content: center;
-  }
-  
-  #search-input {
+}
+
+#search-input {
     width: 500px;
     height: 40px;
     margin-right: 10px;
     color: black;
     background-color: white;
     padding: 10px;
-  }
-  
-  #search-input::placeholder {
+}
+
+#search-input::placeholder {
     color: rgb(53, 51, 51);
-  }
-  
-  #search-input:focus {
+}
+
+#search-input:focus {
     outline: none;
-  }
-  
-  #search-input.dark-mode {
+}
+
+#search-input.dark-mode {
     background-color: black;
     color: white;
-  }
-  
-  #search-input.dark-mode::placeholder {
+}
+
+#search-input.dark-mode::placeholder {
     color: rgb(223, 219, 219);
-  }
-  
-  #search-button {
+}
+
+#search-button {
     height: 40px;
     width: 45px;
     cursor: pointer;
     background-color: white;
-  }
-  
-  #search-button.dark-mode {
+}
+
+#search-button.dark-mode {
     background-color: black;
     color: white;
-  }
-  
-  .header-nav-ul {
+}
+
+.header-nav-ul {
     display: flex;
     flex-direction: row;
     font-size: 35px;
-  }
-  
-  .header-nav-link {
+}
+
+.header-nav-link {
     display: flex;
     align-items: center;
     margin: 20px;
     color: rgb(0, 0, 0);
-  }
-  
-  .header-section-nav {
+}
+
+.header-section-nav {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
-  }
-  
-  .header-section-mode {
+}
+
+.header-section-mode {
     display: flex;
     width: 100px;
     justify-content: center;
     align-items: center;
     margin-left: 10px;
-  }
-  
-  #mode-toggle {
+}
+
+#mode-toggle {
     background-image: url('../img/moon-icon.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -186,13 +186,13 @@ header {
     border: none;
     cursor: pointer;
     background-color: white;
-  }
-  
-  #mode-toggle.dark-mode {
+}
+
+#mode-toggle.dark-mode {
     background-image: url(../img/bright-icon.png);
     background-position: center;
-  }
-  
+}
+
 .main-title {
     display: flex;
     justify-content: center;
@@ -495,14 +495,14 @@ body.dark-mode .btn-playlist-span {
 
 .btn-playlist-span:hover {
     background: #ef32d9;
-    background: -webkit-linear-gradient(to right, #89fffd, #ef32d9); 
-    background: linear-gradient(to right, #89fffd, #ef32d9); 
+    background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);
+    background: linear-gradient(to right, #89fffd, #ef32d9);
 }
 
 body.dark-mode .btn-playlist-span:hover {
-    background: #ff00cc; 
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc); 
-    background: linear-gradient(to right, #333399, #ff00cc); 
+    background: #ff00cc;
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #333399, #ff00cc);
 }
 
 #playlist-songs {
@@ -597,7 +597,7 @@ footer.dark-mode {
 
     header {
         max-height: 90px;
-        max-width: 450px;
+        width: 100%;
     }
 
     .header-section-logo {
@@ -605,8 +605,8 @@ footer.dark-mode {
     }
 
     .header-img-logo {
-        max-width: 80px;
-        max-height: 70px;
+        width: 80px;
+        height: 70px;
         margin: 5px;
         padding: 5px;
     }
@@ -632,7 +632,8 @@ footer.dark-mode {
     }
 
     #search-button {
-        height: 30px;
+        height: 40px;
+        width: 60px;
     }
 
     .header-section-nav {
@@ -664,6 +665,13 @@ footer.dark-mode {
         width: 50px;
         border: none;
     }
+
+    .main-sections {
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+
 
     footer {
         max-height: 40px;
