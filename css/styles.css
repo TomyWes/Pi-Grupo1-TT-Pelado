@@ -734,10 +734,13 @@ footer.dark-mode {
     }
 
     .artist-album ol{
+        display: flex;
+        flex-direction: column;
         padding-left: 20px;
         margin-top: 5px;
         margin-bottom: 0px;
         max-height: 200px;
+
     }
 
     .detail-artist-album-li{
@@ -745,8 +748,6 @@ footer.dark-mode {
         height: 40px;
         overflow: hidden;
         margin: 0px;
-        display: flex;
-        flex-direction: column;
         padding-top: 20px;
     }
 
