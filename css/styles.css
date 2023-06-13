@@ -599,7 +599,7 @@ footer.dark-mode {
         max-width: 450px;
     }
 
-    main{
+    main {
         width: 100vw;
     }
 
@@ -608,7 +608,7 @@ footer.dark-mode {
         width: 100vw;
     }
 
-    .main-title{
+    .main-title {
         width: 100vw;
         height: 7vh;
     }
@@ -619,7 +619,7 @@ footer.dark-mode {
         margin: 0px;
     }
 
-    .header-section-logo.dark-mode{
+    .header-section-logo.dark-mode {
         margin: 0px;
     }
 
@@ -704,24 +704,24 @@ footer.dark-mode {
         justify-content: center;
     }
 
-    .artist-name{
+    .artist-name {
         font-size: 25px;
         display: flex;
         justify-content: center;
     }
 
-    .detail-article{
+    .detail-article {
         width: 40vw;
         max-height: 400px;
         padding: 0px;
     }
-    
 
-    .artist-image{
+
+    .artist-image {
         width: 40vw;
     }
 
-    .artist-album{
+    .artist-album {
         width: 60vw;
         margin-top: 0px;
         max-height: 250px;
@@ -729,11 +729,11 @@ footer.dark-mode {
         font-size: 20px;
     }
 
-    .artist-album h2{
+    .artist-album h2 {
         max-height: 50px;
     }
 
-    .artist-album ol{
+    .artist-album ol {
         display: flex;
         flex-direction: column;
         padding-left: 20px;
@@ -743,7 +743,7 @@ footer.dark-mode {
 
     }
 
-    .detail-artist-album-li{
+    .detail-artist-album-li {
         font-size: 15px;
         height: 40px;
         overflow: hidden;
@@ -751,7 +751,7 @@ footer.dark-mode {
         padding-top: 20px;
     }
 
-    .album-name{
+    .album-name {
         font-size: 20px;
         margin: 10px;
         display: flex;
@@ -764,16 +764,16 @@ footer.dark-mode {
         text-overflow: ellipsis;
     }
 
-    .album-name h2{
+    .album-name h2 {
         display: flex;
         justify-content: center;
     }
 
-    .album-image{
+    .album-image {
         width: 35vw;
     }
 
-    .album-detail-ul{
+    .album-detail-ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -782,41 +782,41 @@ footer.dark-mode {
         margin-bottom: 5px;
     }
 
-    .album-detail-ul li{
+    .album-detail-ul li {
         width: 38vw;
     }
 
-    .album-detail-ul li p{
+    .album-detail-ul li p {
         margin: 5px;
     }
 
-    .album-songs-h1{
+    .album-songs-h1 {
         font-size: 20px;
         max-height: 30px;
     }
 
-    .album-songs-article{
+    .album-songs-article {
         max-height: 400px;
     }
 
-    .album-songs-ol{
+    .album-songs-ol {
         max-height: 300px;
     }
 
-    .album-songs-ol li p{
+    .album-songs-ol li p {
         margin: 2px;
     }
 
-    .song-image{
+    .song-image {
         width: 40vw;
     }
 
-    #preview-audio{
+    #preview-audio {
         max-height: 70px;
         width: 40vw;
     }
 
-    #playlist-songs{
+    #playlist-songs {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

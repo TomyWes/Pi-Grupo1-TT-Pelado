@@ -6,24 +6,24 @@ let genreUrl = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre
 let artistsUrl = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/' + id + '/artists';
 
 fetch(genreUrl)
-    .then(function(response) {
+    .then(function (response) {
         return response.json();
     })
-    .then(function(data) {
+    .then(function (data) {
         console.log(data);
 
         let genreName = document.querySelector('#genre-name');
         genreName.innerText = data.name;
     })
-    .catch(function(error) {
+    .catch(function (error) {
         console.log(error);
     });
 
 fetch(artistsUrl)
-    .then(function(response) {
+    .then(function (response) {
         return response.json();
     })
-    .then(function(data) {
+    .then(function (data) {
         console.log(data);
 
         let genreArtists = document.querySelector('#genre-artists');
@@ -43,7 +43,7 @@ fetch(artistsUrl)
 
         genreArtists.innerHTML = artistsHTML;
     })
-    .catch(function(error) {
+    .catch(function (error) {
         console.log(error);
     });
 
