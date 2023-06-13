@@ -213,7 +213,6 @@ header.dark-mode {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* overflow-x: scroll; */
     width: 90vw;
     margin-bottom: 40px;
 }
@@ -546,10 +545,6 @@ body.dark-mode .playlist-content {
     white-space: nowrap;
 }
 
-#playlist-section p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 footer {
     display: flex;
     flex-direction: column;
@@ -715,7 +710,6 @@ footer.dark-mode {
         max-height: 400px;
         padding: 0px;
     }
-
 
     .artist-image {
         width: 40vw;

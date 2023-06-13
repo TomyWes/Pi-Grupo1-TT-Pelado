@@ -2,12 +2,11 @@ const loader = document.querySelector('.loader');
 loader.classList.remove('hidden');
 
 const searchResultsSection = document.querySelector('#search-results');
-const noResults = document.querySelector('#no-results');
-const queryString = location.search;
-const searchParams = new URLSearchParams(queryString);
-const searchTerm = searchParams.get('term');
-
-const searchUrl = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${encodeURIComponent(searchTerm)}`;
+const noResults            = document.querySelector('#no-results');
+const queryString          = location.search;
+const searchParams         = new URLSearchParams(queryString);
+const searchTerm           = searchParams.get('term');
+const searchUrl            = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${searchTerm}`;
 
 fetch(searchUrl)
   .then(function (response) {

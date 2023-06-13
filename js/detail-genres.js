@@ -1,9 +1,9 @@
-let genreDetail = document.querySelector('#genre-detail');
-let queryString = location.search;
+let genreDetail    = document.querySelector('#genre-detail');
+let queryString    = location.search;
 let queryStringObj = new URLSearchParams(queryString);
-let id = queryStringObj.get('id');
-let genreUrl = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/' + id;
-let artistsUrl = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/' + id + '/artists';
+let id             = queryStringObj.get('id');
+let genreUrl       = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/' + id;
+let artistsUrl     = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/' + id + '/artists';
 
 fetch(genreUrl)
     .then(function (response) {

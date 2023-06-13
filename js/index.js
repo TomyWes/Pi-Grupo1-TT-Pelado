@@ -1,4 +1,4 @@
-let searchForm = document.querySelector('#search-form');
+let searchForm  = document.querySelector('#search-form');
 let searchInput = document.querySelector('#search-input');
 
 searchForm.addEventListener('submit', function (e) {
@@ -16,17 +16,17 @@ searchForm.addEventListener('submit', function (e) {
   }
 });
 
-const modeToggle = document.querySelector('#mode-toggle');
-const header = document.querySelector('header');
-const headerNavLinks = document.querySelectorAll('.header-nav-link');
-const linkElements = document.querySelectorAll('a');
-const logo = document.querySelector('.header-section-logo');
-const searchBtn = document.querySelector('#search-button');
-const mainSectionsH1 = document.querySelectorAll('.main-sections-h1');
+const modeToggle          = document.querySelector('#mode-toggle');
+const header              = document.querySelector('header');
+const headerNavLinks      = document.querySelectorAll('.header-nav-link');
+const linkElements        = document.querySelectorAll('a');
+const logo                = document.querySelector('.header-section-logo');
+const searchBtn           = document.querySelector('#search-button');
+const mainSectionsH1      = document.querySelectorAll('.main-sections-h1');
 const mainSectionsContent = document.querySelectorAll('.main-sections-content');
-const footer = document.querySelector('footer');
-const footerUL = document.querySelectorAll('.ul-footer');
-const borders = document.querySelectorAll('.border');
+const footer              = document.querySelector('footer');
+const footerUL            = document.querySelectorAll('.ul-footer');
+const borders             = document.querySelectorAll('.border');
 
 let preferredMode = localStorage.getItem('preferredMode');
 if (preferredMode === 'dark-mode') {
@@ -97,13 +97,10 @@ function enableLightMode() {
 }
 
 function toggleMode() {
-  ;
   if (document.body.classList.contains('dark-mode')) {
-    ;
     enableLightMode();
     preferredMode = 'light-mode';
   } else {
-    ;
     enableDarkMode();
     preferredMode = 'dark-mode';
   }
@@ -119,8 +116,8 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
     return response.json();
   })
   .then(function (data) {
-    console.log(data)
-    const songs = data.data
+    console.log(data);
+    const songs = data.data;
 
     let songsHTML = '';
 
@@ -150,7 +147,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums
     return response.json();
   })
   .then(function (data) {
-    const albums = data.data
+    const albums = data.data;
 
     let albumsHTML = '';
 
@@ -179,7 +176,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
     return response.json();
   })
   .then(function (data) {
-    const artists = data.data
+    const artists = data.data;
 
     let artistsHTML = '';
 

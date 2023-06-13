@@ -1,11 +1,11 @@
-let songDetail = document.querySelector('#song-detail');
-let queryString = location.search;
+let songDetail     = document.querySelector('#song-detail');
+let queryString    = location.search;
 let queryStringObj = new URLSearchParams(queryString);
-let id = queryStringObj.get('id');
-let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/' + id;
+let id             = queryStringObj.get('id');
+let url            = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/' + id;
 
 let previewContainer = document.querySelector('#preview-song');
-let previewAudio = document.querySelector('#preview-audio');
+let previewAudio     = document.querySelector('#preview-audio');
 
 fetch(url)
     .then(function (response) {
@@ -27,14 +27,14 @@ fetch(url)
         songAlbum.innerHTML += `<a href="detail-album.html?id=${data.album.id}">${data.album.title}</a>`;
 
         let durationSong = document.querySelector('.duration-song')
-        durationSong.innerHTML += data.duration + ` seconds`
+        durationSong.innerHTML += data.duration + ` seconds`;
 
         let releaseSong = document.querySelector('.release-song')
-        releaseSong.innerHTML += data.release_date
+        releaseSong.innerHTML += data.release_date;
 
         let explicitSong = document.querySelector('.explicit-song')
         if (data.explicit_lyrics === true) {
-            explicitSong.innerHTML += "Contains explicit lyrics"
+            explicitSong.innerHTML += "Contains explicit lyrics";
         } else {
             explicitSong.innerHTML += "Does not contain explicit lyrics";
         }
@@ -74,7 +74,7 @@ if (playlist.includes(id)) {
 
 btnPlaylist.addEventListener('click', function (e) {
     if (playlist.includes(id)) {
-        let index = playlist.indexOf(id)
+        let index = playlist.indexOf(id);
         playlist.splice(index, 1);
         btnText.innerText = 'Add to Playlist';
     } else {
@@ -83,5 +83,5 @@ btnPlaylist.addEventListener('click', function (e) {
     }
 
     let playlistToString = JSON.stringify(playlist);
-    localStorage.setItem('playlist', playlistToString)
+    localStorage.setItem('playlist', playlistToString);
 })

@@ -1,5 +1,4 @@
-let playlist = [];
-
+let playlist        = [];
 let playlistStorage = localStorage.getItem('playlist');
 
 if (playlistStorage != null) {
@@ -7,12 +6,12 @@ if (playlistStorage != null) {
 }
 
 let playlistSection = document.querySelector('#playlist-section');
-let playlistSongs = document.querySelector('#playlist-songs');
+let playlistSongs   = document.querySelector('#playlist-songs');
 
 if (playlist === null) {
-    playlistSection.innerHTML = '<p>There are no songs in your playlist yet</p>';
+    playlistSection.innerHTML = '<p class="opensans">There are no songs in your playlist yet</p>';
 } else if (playlist.length === 0) {
-    playlistSection.innerHTML = '<p>There are no songs in your playlist yet</p>';
+    playlistSection.innerHTML = '<p class="opensans">There are no songs in your playlist yet</p>';
 } else {
 
     for (let i = 0; i < playlist.length; i++) {

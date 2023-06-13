@@ -1,6 +1,4 @@
-let genresUrl = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre';
-
-fetch(genresUrl)
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre')
     .then(function (response) {
         return response.json();
     })
