@@ -650,23 +650,17 @@ body.dark-mode .ul-footer {
     }
 
     .main-title {
-        width: 100vw;
-        height: 7vh;
+        font-size: 25px;
     }
 
     .header-section-logo {
-        max-width: 15vw;
-        max-height: 15vh;
-        margin: 0px;
-    }
-
-    .header-section-logo.dark-mode {
+        max-width: 20vw;
         margin: 0px;
     }
 
     .header-img-logo {
-        width: 12vw;
-        height: 10vh;
+        width: 20vw;
+        height: 12vh;
         margin: 5px;
         padding: 5px;
     }
@@ -675,10 +669,6 @@ body.dark-mode .ul-footer {
         max-width: 50vw;
         margin-left: 0%;
         margin-right: 0px;
-        border: none;
-    }
-
-    .header-section-form.dark-mode {
         border: none;
     }
 
@@ -700,10 +690,6 @@ body.dark-mode .ul-footer {
         max-width: 20vw;
         border: none;
         margin: 0px;
-    }
-
-    .header-section-nav.dark-mode {
-        border: none;
     }
 
     .header-nav-ul {
@@ -729,8 +715,7 @@ body.dark-mode .ul-footer {
     }
 
     #mode-toggle {
-        max-width: 50px;
-        border: none;
+        max-width: 30px;
     }
 
     .main-sections {
@@ -738,7 +723,7 @@ body.dark-mode .ul-footer {
         flex-direction: row;
         justify-content: flex-start;
         overflow-x: scroll;
-        width: 100vw;
+        width: 90vw;
     }
 
     .artist-name {
