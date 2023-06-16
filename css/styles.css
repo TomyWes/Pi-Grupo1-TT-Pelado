@@ -188,7 +188,7 @@ body.dark-mode #search-button {
     background-color: white;
 }
 
-body.dark-mode #mode-toggle{
+body.dark-mode #mode-toggle {
     background-image: url(../img/bright-icon.png);
     background-position: center;
 }
@@ -503,6 +503,49 @@ body.dark-mode .btn-playlist-span:hover {
     background: linear-gradient(to right, #333399, #ff00cc);
 }
 
+#btn-go-playlist {
+    border: 0;
+    background: #ef32d9;
+    background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);
+    background: linear-gradient(to right, #89fffd, #ef32d9);
+    border-radius: 8px;
+    color: black;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+body.dark-mode #btn-go-playlist {
+    color: white;
+    background: #ff00cc;
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #333399, #ff00cc);
+}
+
+.btn-go-toplaylist {
+    background-color: white;
+    padding: 16px 24px;
+    border-radius: 6px;
+}
+
+body.dark-mode .btn-go-toplaylist {
+    background-color: #0d0620;
+}
+
+.btn-go-toplaylist:hover {
+    background: #ef32d9;
+    background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);
+    background: linear-gradient(to right, #89fffd, #ef32d9);
+}
+
+body.dark-mode .btn-go-toplaylist:hover {
+    background: #ff00cc;
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #333399, #ff00cc);
+}
+
 #playlist-songs {
     display: flex;
     flex-direction: row;
@@ -560,7 +603,7 @@ footer {
     background-size: cover;
 }
 
-body.dark-mode footer{
+body.dark-mode footer {
     background-image: url(../img/background-header.jpeg);
     background-size: 55%;
     border-bottom: white;
