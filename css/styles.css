@@ -443,6 +443,10 @@ body.dark-mode .detail-article {
     margin: 15px;
 }
 
+#no-results{
+    margin: 15px;
+}
+
 .loader {
     display: flex;
     justify-content: center;
