@@ -47,7 +47,7 @@ header {
     background-size: cover;
 }
 
-header.dark-mode {
+body.dark-mode header {
     background-image: url(../img/background-header.jpeg);
     background-position: center;
     background-repeat: repeat;
@@ -63,7 +63,7 @@ header.dark-mode {
     border-radius: 20px;
 }
 
-.border.dark-mode {
+body.dark-mode .border {
     border-color: white;
 }
 
@@ -81,7 +81,7 @@ header.dark-mode {
     margin: 10px;
 }
 
-.header-section-logo.dark-mode {
+body.dark-mode .header-section-logo {
     background: black;
     border: 1px;
     border-radius: 100%;
@@ -128,12 +128,12 @@ header.dark-mode {
     outline: none;
 }
 
-#search-input.dark-mode {
+body.dark-mode #search-input {
     background-color: black;
     color: white;
 }
 
-#search-input.dark-mode::placeholder {
+body.dark-mode #search-input::placeholder {
     color: rgb(223, 219, 219);
 }
 
@@ -144,7 +144,7 @@ header.dark-mode {
     background-color: white;
 }
 
-#search-button.dark-mode {
+body.dark-mode #search-button {
     background-color: black;
     color: white;
 }
@@ -188,7 +188,7 @@ header.dark-mode {
     background-color: white;
 }
 
-#mode-toggle.dark-mode {
+body.dark-mode #mode-toggle{
     background-image: url(../img/bright-icon.png);
     background-position: center;
 }
@@ -219,7 +219,6 @@ header.dark-mode {
 
 .main-sections-h1 {
     display: flex;
-    width: 500px;
     font-size: 40px;
     justify-content: center;
 }
@@ -238,7 +237,7 @@ header.dark-mode {
     padding: 5px;
 }
 
-.dark-mode .main-sections-content {
+body.dark-mode .main-sections-content {
     border-color: #0d0620;
     background-image: url(../img/3463945_63136.jpg);
     background-size: cover;
@@ -561,7 +560,7 @@ footer {
     background-size: cover;
 }
 
-footer.dark-mode {
+body.dark-mode footer{
     background-image: url(../img/background-header.jpeg);
     background-size: 55%;
     border-bottom: white;
@@ -581,7 +580,7 @@ footer.dark-mode {
     margin-right: 30px;
 }
 
-.ul-footer.dark-mode {
+body.dark-mode .ul-footer {
     color: white;
 }
 
@@ -619,7 +618,7 @@ footer.dark-mode {
     }
 
     .header-img-logo {
-        width: 15vw;
+        width: 12vw;
         height: 10vh;
         margin: 5px;
         padding: 5px;
@@ -693,10 +692,6 @@ footer.dark-mode {
         justify-content: flex-start;
         overflow-x: scroll;
         width: 100vw;
-    }
-
-    .main-sections-h1 {
-        justify-content: center;
     }
 
     .artist-name {

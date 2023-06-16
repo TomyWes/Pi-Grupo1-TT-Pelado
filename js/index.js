@@ -16,99 +16,27 @@ searchForm.addEventListener('submit', function (e) {
   }
 });
 
-const modeToggle          = document.querySelector('#mode-toggle');
-const header              = document.querySelector('header');
-const headerNavLinks      = document.querySelectorAll('.header-nav-link');
-const linkElements        = document.querySelectorAll('a');
-const logo                = document.querySelector('.header-section-logo');
-const searchBtn           = document.querySelector('#search-button');
-const mainSectionsH1      = document.querySelectorAll('.main-sections-h1');
-const mainSectionsContent = document.querySelectorAll('.main-sections-content');
-const footer              = document.querySelector('footer');
-const footerUL            = document.querySelectorAll('.ul-footer');
-const borders             = document.querySelectorAll('.border');
+const modeToggle = document.querySelector('#mode-toggle');
+let isDarkModeOn = false;
 
 let preferredMode = localStorage.getItem('preferredMode');
 if (preferredMode === 'dark-mode') {
-  enableDarkMode();
-} else {
-  preferredMode = 'light-mode';
+  isDarkModeOn = true;
 }
 
-function enableDarkMode() {
-  document.body.classList.add('dark-mode');
-  modeToggle.classList.add('dark-mode');
-  header.classList.add('dark-mode');
-  logo.classList.add('dark-mode');
-  searchInput.classList.add('dark-mode');
-  searchBtn.classList.add('dark-mode');
-  for (let i = 0; i < linkElements.length; i++) {
-    const linkElement = linkElements[i];
-    linkElement.classList.add('dark-mode');
-  }
-  for (let i = 0; i < mainSectionsH1.length; i++) {
-    const element = mainSectionsH1[i];
-    element.classList.add('dark-mode');
-  }
-  for (let i = 0; i < mainSectionsContent.length; i++) {
-    const element = mainSectionsContent[i];
-    element.classList.add('dark-mode');
-  }
-  footer.classList.add('dark-mode');
-  for (let i = 0; i < footerUL.length; i++) {
-    const ul = footerUL[i];
-    ul.classList.add('dark-mode');
-  }
-  for (let i = 0; i < borders.length; i++) {
-    const border = borders[i];
-    border.classList.add('dark-mode');
-  }
-}
-
-function enableLightMode() {
-  ;
-  document.body.classList.remove('dark-mode');
-  modeToggle.classList.remove('dark-mode');
-  header.classList.remove('dark-mode');
-  logo.classList.remove('dark-mode');
-  searchInput.classList.remove('dark-mode');
-  searchBtn.classList.remove('dark-mode');
-  for (let i = 0; i < linkElements.length; i++) {
-    const linkElement = linkElements[i];
-    linkElement.classList.remove('dark-mode');
-  }
-  for (let i = 0; i < mainSectionsH1.length; i++) {
-    const element = mainSectionsH1[i];
-    element.classList.remove('dark-mode');
-  }
-  for (let i = 0; i < mainSectionsContent.length; i++) {
-    const element = mainSectionsContent[i];
-    element.classList.remove('dark-mode');
-  }
-  footer.classList.remove('dark-mode');
-  for (let i = 0; i < footerUL.length; i++) {
-    const ul = footerUL[i];
-    ul.classList.remove('dark-mode');
-  }
-  for (let i = 0; i < borders.length; i++) {
-    const border = borders[i];
-    border.classList.remove('dark-mode');
-  }
-}
-
-function toggleMode() {
-  if (document.body.classList.contains('dark-mode')) {
-    enableLightMode();
+modeToggle.addEventListener('click', function () {
+  if (isDarkModeOn) {
+    document.body.classList.remove('dark-mode');
     preferredMode = 'light-mode';
+    isDarkModeOn = false;
   } else {
-    enableDarkMode();
+    document.body.classList.add('dark-mode');
     preferredMode = 'dark-mode';
+    isDarkModeOn = true;
   }
 
   localStorage.setItem('preferredMode', preferredMode);
-}
-
-modeToggle.addEventListener('click', toggleMode);
+});
 
 const songsSection = document.querySelector('.songs');
 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks')
